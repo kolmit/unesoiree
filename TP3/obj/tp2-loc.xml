@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\adm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 10" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\interface_observerpressure.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\interface_observercalculator.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\tp2.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\src\pressurecalculator.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
