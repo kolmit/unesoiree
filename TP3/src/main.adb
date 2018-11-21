@@ -34,9 +34,9 @@ procedure Main is
                                  idDevice      => 2,
                                  measureStatus => True);
 
-   Un_External_ADM.simuleMeasure(valeurMesure  => 101011,
-                                 idDevice      => 3,
-                                 measureStatus => True);
+   --Un_External_ADM.simuleMeasure(valeurMesure  => 101011,
+   --                              idDevice      => 3,
+   --                              measureStatus => True);
 
    Un_External_ADM.simuleMeasure(valeurMesure  => 100000,
                                  idDevice      => 5,
