@@ -1,0 +1,25 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U physicconstants%s	physicconstants.ads	41a90584 NE OO PK
+
+D physicconstants.ads	20181129203048 41a90584 physicconstants%s
+D system.ads		20180524051738 32a08138 system%s
+X 1 physicconstants.ads
+1K9*PhysicConstants 14l5 14e20
+3f4*p0{float}
+5f4*g{float}
+6f4*R{float}
+7f4*T0{float}
+8f4*M{float}
+10f4*RHO{float}
+11f4*GAMMA{float}
+12f4*V_SON{float}
+

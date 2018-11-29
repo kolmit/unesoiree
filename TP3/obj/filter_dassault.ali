@@ -1,0 +1,60 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U filter_dassault%b	filter_dassault.adb	ea25fe90 OO PK
+
+U filter_dassault%s	filter_dassault.ads	38686b44 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W interface_strategiefilter%s  interface_strategiefilter.ads  interface_strategiefilter.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-except.ads		20180524051736 291912d5 ada.exceptions%s
+D a-finali.ads		20180524051738 bf4f806b ada.finalization%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051738 491b781d ada.tags%s
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D filter_dassault.ads	20181129162050 7e5f563c filter_dassault%s
+D filter_dassault.adb	20181129161746 947aa8ac filter_dassault%b
+D interface_strategiefilter.ads  20181129162042 46373d78 interface_strategiefilter%s
+D system.ads		20180524051738 32a08138 system%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180524051736 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180524051736 b16154c2 system.storage_pools%s
+D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
+X 7 filter_dassault.ads
+3K9*Filter_Dassault 10E9 12l5 12e20 8|1b14 12l5 12t20
+5R9*T_Filter_Dassault<9|3R9> 6P24 6r53 10c9 10e78 8|4r21
+6V24*filterPressure{float}<9|6p13> 6^39 6>72 8|3b24 10l8 10t22
+6p39 This(5R9) 8|4b7
+6f72 pressure{float} 8|5b7 9r14
+X 9 interface_strategiefilter.ads
+1K9*Interface_StrategieFilter 7|1w6 1r37 9|9e30
+3h9*T_Interface_StrategieFilter 7|5r34 10r34
+

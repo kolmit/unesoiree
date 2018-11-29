@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U adm%b			adm.adb			ce10df7f OO PK IU
+U adm%b			adm.adb			895053f3 OO PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -34,13 +34,14 @@ Z system.exn_llf%s	s-exnllf.adb		s-exnllf.ali
 Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
 Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 
-U adm%s			adm.ads			7989b0a5 EE OO PF PK IU
+U adm%s			adm.ads			78fe0151 EE OO PF PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W interface_observercalculator%s  interface_observercalculator.ads  interface_observercalculator.ali
+W interface_strategiefilter%s  interface_strategiefilter.ads  interface_strategiefilter.ali
 W pressurecalculator%s	pressurecalculator.adb	pressurecalculator.ali
 Z system%s		system.ads		system.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -59,11 +60,12 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D adm.ads		20181112235758 68f3a50b adm%s
+D adm.ads		20181129160830 2fb32987 adm%s
 D adm.adb		20181112235800 f392184d adm%b
 D externaladm.ads	20181112153050 179a5e54 externaladm%s
 D interface_observercalculator.ads  20181112164722 a13c5af6 interface_observercalculator%s
 D interface_observerpressure.ads  20181112155818 cae20398 interface_observerpressure%s
+D interface_strategiefilter.ads  20181129162042 46373d78 interface_strategiefilter%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
@@ -104,21 +106,23 @@ X 11 a-textio.ads
 49K13*Text_IO 471e16 13|3w10 3r27
 263U14*Put_Line 14|23s7 26s7
 X 13 adm.ads
-6K9*ADM 17E9 27l5 27e8 14|6b14 48l5 48t8
-8R8*T_ADM<16|4R8> 9r35 13P24 13r53 17c9 20e14 23p28 23r58 14|12r48 19r54
+7K9*ADM 18E9 30l5 30e8 14|6b14 48l5 48t8
+9R8*T_ADM<16|4R8> 10r35 14P24 14r53 18c9 23e14 26p28 26r58 14|12r48 19r54
 . 31r58
-9P8*T_ADM_Access(8R8) 12r114 14|10r71 12r28
-12V27*New_And_InitializeADM{9P8} 12>50 14|9b28 15l8 15t29
-12p50 Le_Calculator{21|9P8} 14|10b7 13r31
-13U24*notifyChangeADM<16|9p14> 13^40 13>60 14|19b25 27l8 27t23
-13p40 This(8R8) 14|19b41 24r7 25r19 26r68
-13f60 averagePressure{float} 14|19b61 24r45
-18f7 altitude{float} 14|26r73 44m12 45r19
-19f7 averagePressureFromCalculator{float} 14|24m12 42r41
-23V28 calculAltitude{float} 23^44 24r17 14|25s24 31b28 46l8 46t22
-23p44 This(8R8) 14|31b44 42r36 44r7 45r14
+10P8*T_ADM_Access(9R8) 13r114 14|10r71 12r28
+13V27*New_And_InitializeADM{10P8} 13>50 14|9b28 15l8 15t29
+13p50 Le_Calculator{22|9P8} 14|10b7 13r31
+14U24*notifyChangeADM<16|9p14> 14^40 14>60 14|19b25 27l8 27t23
+14p40 This(9R8) 14|19b41 24r7 25r19 26r68
+14f60 averagePressure{float} 14|19b61 24r45
+19f7 altitude{float} 14|26r73 44m12 45r19
+20f7 averagePressureFromCalculator{float} 14|24m12 42r41
+21p7 staticPressure{18|4P9}
+21p23 totalPressure{18|4P9}
+26V28 calculAltitude{float} 26^44 27r17 14|25s24 31b28 46l8 46t22
+26p44 This(9R8) 14|31b44 42r36 44r7 45r14
 X 14 adm.adb
-12p14 ADM{13|9P8} 13r100
+12p14 ADM{13|10P8} 13r100
 21f4 altitude{float} 25m7
 32f7 g{float} 44r34
 33f7 p0{float} 42r33
@@ -129,11 +133,15 @@ X 14 adm.adb
 38K15 Float_Functions[7|39] 42r13
 X 16 interface_observercalculator.ads
 1K9*Interface_ObserverCalculator 13|2w6 2r40 16|15e33
-4h8*T_Interface_ObserverCalculator 13|8r21 17r22
+4h8*T_Interface_ObserverCalculator 13|9r21 18r22
 5P8*T_Interface_ObserverCalculator_Access(4R8) 14|13r62
-X 21 pressurecalculator.ads
-6K9*PressureCalculator 13|1w6 1r31 21|36e23
-9P8*T_PressureCalculator_Access(8R8) 13|12r78 14|10r35
+X 18 interface_strategiefilter.ads
+1K9*Interface_StrategieFilter 13|4w6 4r37 18|9e30
+3h9*T_Interface_StrategieFilter
+4P9*T_Interface_StrategieFilter_Access(3R9) 13|21r39
+X 22 pressurecalculator.ads
+6K9*PressureCalculator 13|1w6 1r31 22|36e23
+9P8*T_PressureCalculator_Access(8R8) 13|13r78 14|10r35
 18U14*registerObserverADM 14|13s10
 18p70 Observer{16|5P8} 14|13r50
 

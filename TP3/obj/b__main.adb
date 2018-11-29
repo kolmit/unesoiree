@@ -33,12 +33,19 @@ package body ada_main is
    E103 : Short_Integer; pragma Import (Ada, E103, "ada__text_io_E");
    E143 : Short_Integer; pragma Import (Ada, E143, "system__pool_global_E");
    E135 : Short_Integer; pragma Import (Ada, E135, "interface_observercalculator_E");
-   E157 : Short_Integer; pragma Import (Ada, E157, "interface_observerpressure_E");
-   E158 : Short_Integer; pragma Import (Ada, E158, "objetancetre_E");
-   E156 : Short_Integer; pragma Import (Ada, E156, "externaladm_E");
-   E147 : Short_Integer; pragma Import (Ada, E147, "pressurecalculator_E");
+   E158 : Short_Integer; pragma Import (Ada, E158, "interface_observerpressure_E");
+   E146 : Short_Integer; pragma Import (Ada, E146, "interface_strategiefilter_E");
+   E163 : Short_Integer; pragma Import (Ada, E163, "filter_airbus_E");
+   E165 : Short_Integer; pragma Import (Ada, E165, "filter_boeing_E");
+   E167 : Short_Integer; pragma Import (Ada, E167, "filter_dassault_E");
+   E168 : Short_Integer; pragma Import (Ada, E168, "interface_strategievitesse_E");
+   E159 : Short_Integer; pragma Import (Ada, E159, "objetancetre_E");
+   E157 : Short_Integer; pragma Import (Ada, E157, "externaladm_E");
+   E148 : Short_Integer; pragma Import (Ada, E148, "pressurecalculator_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "adm_E");
-   E162 : Short_Integer; pragma Import (Ada, E162, "pressuresensor_E");
+   E170 : Short_Integer; pragma Import (Ada, E170, "pressuresensor_E");
+   E172 : Short_Integer; pragma Import (Ada, E172, "vitesse_ecoulementcompressible_E");
+   E175 : Short_Integer; pragma Import (Ada, E175, "vitesse_ecoulementincompressible_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -49,75 +56,124 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E162 := E162 - 1;
+      E175 := E175 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "pressuresensor__finalize_spec");
+         pragma Import (Ada, F1, "vitesse_ecoulementincompressible__finalize_spec");
       begin
          F1;
       end;
-      E115 := E115 - 1;
+      E172 := E172 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "adm__finalize_spec");
+         pragma Import (Ada, F2, "vitesse_ecoulementcompressible__finalize_spec");
       begin
          F2;
       end;
-      E147 := E147 - 1;
+      E170 := E170 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "pressurecalculator__finalize_spec");
+         pragma Import (Ada, F3, "pressuresensor__finalize_spec");
       begin
          F3;
       end;
-      E156 := E156 - 1;
+      E115 := E115 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "externaladm__finalize_spec");
+         pragma Import (Ada, F4, "adm__finalize_spec");
       begin
          F4;
       end;
+      E148 := E148 - 1;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "interface_observerpressure__finalize_spec");
+         pragma Import (Ada, F5, "pressurecalculator__finalize_spec");
       begin
-         E157 := E157 - 1;
          F5;
       end;
+      E157 := E157 - 1;
       declare
          procedure F6;
-         pragma Import (Ada, F6, "interface_observercalculator__finalize_spec");
+         pragma Import (Ada, F6, "externaladm__finalize_spec");
       begin
-         E135 := E135 - 1;
          F6;
       end;
-      E143 := E143 - 1;
       declare
          procedure F7;
-         pragma Import (Ada, F7, "system__pool_global__finalize_spec");
+         pragma Import (Ada, F7, "interface_strategievitesse__finalize_spec");
       begin
+         E168 := E168 - 1;
          F7;
       end;
-      E103 := E103 - 1;
+      E167 := E167 - 1;
       declare
          procedure F8;
-         pragma Import (Ada, F8, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F8, "filter_dassault__finalize_spec");
       begin
          F8;
       end;
-      E137 := E137 - 1;
+      E165 := E165 - 1;
       declare
          procedure F9;
-         pragma Import (Ada, F9, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F9, "filter_boeing__finalize_spec");
       begin
          F9;
       end;
+      E163 := E163 - 1;
       declare
          procedure F10;
-         pragma Import (Ada, F10, "system__file_io__finalize_body");
+         pragma Import (Ada, F10, "filter_airbus__finalize_spec");
+      begin
+         F10;
+      end;
+      declare
+         procedure F11;
+         pragma Import (Ada, F11, "interface_strategiefilter__finalize_spec");
+      begin
+         E146 := E146 - 1;
+         F11;
+      end;
+      declare
+         procedure F12;
+         pragma Import (Ada, F12, "interface_observerpressure__finalize_spec");
+      begin
+         E158 := E158 - 1;
+         F12;
+      end;
+      declare
+         procedure F13;
+         pragma Import (Ada, F13, "interface_observercalculator__finalize_spec");
+      begin
+         E135 := E135 - 1;
+         F13;
+      end;
+      E143 := E143 - 1;
+      declare
+         procedure F14;
+         pragma Import (Ada, F14, "system__pool_global__finalize_spec");
+      begin
+         F14;
+      end;
+      E103 := E103 - 1;
+      declare
+         procedure F15;
+         pragma Import (Ada, F15, "ada__text_io__finalize_spec");
+      begin
+         F15;
+      end;
+      E137 := E137 - 1;
+      declare
+         procedure F16;
+         pragma Import (Ada, F16, "system__finalization_masters__finalize_spec");
+      begin
+         F16;
+      end;
+      declare
+         procedure F17;
+         pragma Import (Ada, F17, "system__file_io__finalize_body");
       begin
          E109 := E109 - 1;
-         F10;
+         F17;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -278,21 +334,40 @@ package body ada_main is
       Interface_Observercalculator'Elab_Spec;
       E135 := E135 + 1;
       Interface_Observerpressure'Elab_Spec;
-      E157 := E157 + 1;
-      Objetancetre'Elab_Spec;
       E158 := E158 + 1;
+      Interface_Strategiefilter'Elab_Spec;
+      E146 := E146 + 1;
+      Filter_Airbus'Elab_Spec;
+      Filter_Airbus'Elab_Body;
+      E163 := E163 + 1;
+      Filter_Boeing'Elab_Spec;
+      Filter_Boeing'Elab_Body;
+      E165 := E165 + 1;
+      Filter_Dassault'Elab_Spec;
+      Filter_Dassault'Elab_Body;
+      E167 := E167 + 1;
+      Interface_Strategievitesse'Elab_Spec;
+      E168 := E168 + 1;
+      Objetancetre'Elab_Spec;
+      E159 := E159 + 1;
       Externaladm'Elab_Spec;
       Externaladm'Elab_Body;
-      E156 := E156 + 1;
+      E157 := E157 + 1;
       Pressurecalculator'Elab_Spec;
       Pressurecalculator'Elab_Body;
-      E147 := E147 + 1;
+      E148 := E148 + 1;
       ADM'ELAB_SPEC;
       ADM'ELAB_BODY;
       E115 := E115 + 1;
       Pressuresensor'Elab_Spec;
       Pressuresensor'Elab_Body;
-      E162 := E162 + 1;
+      E170 := E170 + 1;
+      Vitesse_Ecoulementcompressible'Elab_Spec;
+      Vitesse_Ecoulementcompressible'Elab_Body;
+      E172 := E172 + 1;
+      Vitesse_Ecoulementincompressible'Elab_Spec;
+      Vitesse_Ecoulementincompressible'Elab_Body;
+      E175 := E175 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -328,16 +403,24 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\GNAT\2018\bin\TP2\obj\interface_observercalculator.o
-   --   D:\GNAT\2018\bin\TP2\obj\interface_observerpressure.o
-   --   D:\GNAT\2018\bin\TP2\obj\objetancetre.o
-   --   D:\GNAT\2018\bin\TP2\obj\externaladm.o
-   --   D:\GNAT\2018\bin\TP2\obj\pressurecalculator.o
-   --   D:\GNAT\2018\bin\TP2\obj\adm.o
-   --   D:\GNAT\2018\bin\TP2\obj\pressuresensor.o
-   --   D:\GNAT\2018\bin\TP2\obj\main.o
-   --   -LD:\GNAT\2018\bin\TP2\obj\
-   --   -LD:\GNAT\2018\bin\TP2\obj\
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\interface_observercalculator.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\interface_observerpressure.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\interface_strategiefilter.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\filter_airbus.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\filter_boeing.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\filter_dassault.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\interface_strategievitesse.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\objetancetre.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\externaladm.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\physicconstants.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\pressurecalculator.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\adm.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\pressuresensor.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\vitesse_ecoulementcompressible.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\vitesse_ecoulementincompressible.o
+   --   C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\main.o
+   --   -LC:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\
+   --   -LC:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP3\obj\
    --   -LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
    --   -static
    --   -lgnat

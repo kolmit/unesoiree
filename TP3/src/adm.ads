@@ -1,6 +1,7 @@
 with PressureCalculator;  use PressureCalculator;
 with Interface_ObserverCalculator; use Interface_ObserverCalculator;
 with Ada.Text_IO; use Ada.Text_IO;
+with Interface_StrategieFilter; use Interface_StrategieFilter;
 
 
 package ADM is
@@ -17,6 +18,8 @@ private
    type T_ADM is new T_Interface_ObserverCalculator with record
       altitude : Float; 
       averagePressureFromCalculator : Float;
+      staticPressure, totalPressure : T_Interface_StrategieFilter_Access;
+
    end record;
 
    

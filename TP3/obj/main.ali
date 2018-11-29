@@ -18,16 +18,23 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		48bb6034 NE OO SU
+U main%b		main.adb		cd037f2c NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W adm%s			adm.adb			adm.ali
 W externaladm%s		externaladm.adb		externaladm.ali
+W filter_airbus%s	filter_airbus.adb	filter_airbus.ali
+W filter_boeing%s	filter_boeing.adb	filter_boeing.ali
+W filter_dassault%s	filter_dassault.adb	filter_dassault.ali
 W interface_observerpressure%s  interface_observerpressure.ads  interface_observerpressure.ali
+W interface_strategiefilter%s  interface_strategiefilter.ads  interface_strategiefilter.ali
+W interface_strategievitesse%s  interface_strategievitesse.ads  interface_strategievitesse.ali
 W pressurecalculator%s	pressurecalculator.adb	pressurecalculator.ali
 W pressuresensor%s	pressuresensor.adb	pressuresensor.ali
 Z system%s		system.ads		system.ali
+W vitesse_ecoulementcompressible%s  vitesse_ecoulementcompressible.adb  vitesse_ecoulementcompressible.ali
+W vitesse_ecoulementincompressible%s  vitesse_ecoulementincompressible.adb  vitesse_ecoulementincompressible.ali
 
 D ada.ads		20180524051736 76789da1 ada%s
 D a-except.ads		20180524051736 291912d5 ada.exceptions%s
@@ -37,13 +44,18 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D adm.ads		20181112235758 68f3a50b adm%s
+D adm.ads		20181129160830 2fb32987 adm%s
 D externaladm.ads	20181112153050 179a5e54 externaladm%s
+D filter_airbus.ads	20181129162926 ad2b1051 filter_airbus%s
+D filter_boeing.ads	20181129185118 9a7a6f34 filter_boeing%s
+D filter_dassault.ads	20181129162050 7e5f563c filter_dassault%s
 D interface_observercalculator.ads  20181112164722 a13c5af6 interface_observercalculator%s
 D interface_observerpressure.ads  20181112155818 cae20398 interface_observerpressure%s
+D interface_strategiefilter.ads  20181129162042 46373d78 interface_strategiefilter%s
+D interface_strategievitesse.ads  20181129193708 23ca6036 interface_strategievitesse%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20181121091304 7250d691 main%b
+D main.adb		20181129203346 f88d4abf main%b
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
 D pressurecalculator.ads  20181112164748 385bfc02 pressurecalculator%s
 D pressuresensor.ads	20181112185554 3f26013a pressuresensor%s
@@ -65,58 +77,76 @@ D s-stratt.ads		20180524051736 aedef97e system.stream_attributes%s
 D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+D vitesse_ecoulementcompressible.ads  20181129202800 b43fd72d vitesse_ecoulementcompressible%s
+D vitesse_ecoulementincompressible.ads  20181129203626 d0e9ac80 vitesse_ecoulementincompressible%s
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6 1r23
+16K9*Ada 20e8 20|1r6 1r23
 X 7 a-textio.ads
-49K13*Text_IO 471e16 15|1w10 1r27
+49K13*Text_IO 471e16 20|1w10 1r27
 X 9 adm.ads
-6K9*ADM 27e8 15|6w6 6r15
-9P8*T_ADM_Access(8R8) 15|15r22
-12V27*New_And_InitializeADM{9P8} 15|15s38
+7K9*ADM 30e8 20|13w6 13r15
+10P8*T_ADM_Access(9R8) 20|22r22
+13V27*New_And_InitializeADM{10P8} 20|22s38
 X 10 externaladm.ads
-6K9*ExternalADM 29e16 15|2w6 2r23
-8R9*T_ExternalADM<16|4R9> 27e14 15|9r59
-9P9*T_ExternalADM_Access(8R9) 15|9r31
-13U14*simuleMeasure 15|27s20 32s20 36s20 40s20 54s21 58s21 75s21 79s21 94s21
-. 98s21 115s21 119s21 123s21 130s21 134s21
-13i56 valeurMesure{integer} 15|27r34 32r34 36r34 40r34 54r35 58r35 75r35
-. 79r35 94r35 98r35 115r35 119r35 123r35 130r35 134r35
-13i83 idDevice{integer} 15|28r34 33r34 37r34 41r34 55r35 59r35 76r35 80r35
-. 95r35 99r35 116r35 120r35 124r35 131r35 135r35
-13b106 measureStatus{boolean} 15|29r34 34r34 38r34 42r34 56r34 60r35 77r34
-. 81r35 96r34 100r35 117r35 121r35 125r34 132r34 136r35
-X 11 interface_observercalculator.ads
+6K9*ExternalADM 29e16 20|2w6 2r23
+8R9*T_ExternalADM<21|4R9> 27e14 20|16r59
+9P9*T_ExternalADM_Access(8R9) 20|16r31
+13U14*simuleMeasure 20|34s20 40s20 44s20 48s20 62s21 66s21 83s21 87s21 102s21
+. 106s21 123s21 127s21 131s21 138s21 142s21
+13i56 valeurMesure{integer} 20|34r34 40r34 44r34 48r34 62r35 66r35 83r35
+. 87r35 102r35 106r35 123r35 127r35 131r35 138r35 142r35
+13i83 idDevice{integer} 20|35r34 41r34 45r34 49r34 63r35 67r35 84r35 88r35
+. 103r35 107r35 124r35 128r35 132r35 139r35 143r35
+13b106 measureStatus{boolean} 20|36r34 42r34 46r34 50r34 64r34 68r35 85r34
+. 89r35 104r34 108r35 125r35 129r35 133r34 140r34 144r35
+X 11 filter_airbus.ads
+4K9*Filter_Airbus 21e18 20|8w6 8r25
+X 12 filter_boeing.ads
+4K9*Filter_Boeing 14e18 20|9w6 9r25
+X 13 filter_dassault.ads
+3K9*Filter_Dassault 12e20 20|10w6 10r27
+X 14 interface_observercalculator.ads
 4h8*T_Interface_ObserverCalculator
-X 12 interface_observerpressure.ads
-1K9*Interface_ObserverPressure 16e31 15|5w6 5r38
+X 15 interface_observerpressure.ads
+1K9*Interface_ObserverPressure 16e31 20|5w6 5r38
 3h8*T_Interface_ObserverPressure
-4P8*T_Interface_ObserverPressure_Access(3R8) 15|21r33 24r33
-X 15 main.adb
-8U11*Main 8b11 153l5 153t9
-9p4 Un_External_ADM{10|9P9} 14r88 27r4 32r4 36r4 40r4 54r5 58r5 75r5 79r5
-. 94r5 98r5 115r5 119r5 123r5 130r5 134r5
-10p4 Un_Sensor{18|9P9} 20r33 44r4 62r5 83r5 102r5 138r5
-11p4 Un_Autre_Sensor{18|9P9} 23r33 48r4 66r5 87r5 106r5 142r5 146r5
-14p4 Un_Pressure_Calculator{17|9P8} 15r60 21r69 24r69
-15p4 Un_ADM{9|9P8}
-16i4 nb{integer}
-X 17 pressurecalculator.ads
-6K9*PressureCalculator 15|3w6 3r30 17|36e23
-9P8*T_PressureCalculator_Access(8R8) 15|14r38
-12V27*New_And_Initialize{9P8} 15|14s69
-X 18 pressuresensor.ads
-6K9*PressureSensor 15|4w6 4r26 18|29e19
-8R9*T_PressureSensor<16|4R9> 15|10r56 11r62 18|28e13
-9P9*T_PressureSensor_Access(8R9) 15|10r25 11r31
-11U14*registerObserver 15|20s4 23s4
-11r32 This{8R9} 15|20r21 23r21
-11p63 Observer{12|4P8} 15|21r21 24r21
-13U14*simuleMeasure 15|44s14 48s20 62s15 66s21 83s15 87s21 102s15 106s21
-. 138s15 142s21 146s21
-13i59 valeurMesure{integer} 15|44r28 48r34 62r29 66r35 83r29 87r35 102r29
-. 106r35 138r29 142r35 146r35
-13i86 idDevice{integer} 15|45r28 49r28 63r29 67r29 84r29 88r29 103r29 107r29
-. 139r29 143r29 147r29
-13b109 measureStatus{boolean} 15|46r28 50r34 64r29 68r29 85r29 89r29 104r29
-. 108r29 140r29 144r29 148r29
+4P8*T_Interface_ObserverPressure_Access(3R8) 20|28r33 31r33
+X 16 interface_strategiefilter.ads
+1K9*Interface_StrategieFilter 9e30 20|6w6 6r37
+3h9*T_Interface_StrategieFilter
+X 17 interface_strategievitesse.ads
+1K9*Interface_StrategieVitesse 9e31 20|7w6 7r38
+3h9*T_Interface_StrategieVitesse
+X 20 main.adb
+15U11*Main 15b11 161l5 161t9
+16p4 Un_External_ADM{10|9P9} 21r88 34r4 40r4 44r4 48r4 62r5 66r5 83r5 87r5
+. 102r5 106r5 123r5 127r5 131r5 138r5 142r5
+17p4 Un_Sensor{23|9P9} 27r33 52r4 70r5 91r5 110r5 146r5
+18p4 Un_Autre_Sensor{23|9P9} 30r33 56r4 74r5 95r5 114r5 150r5 154r5
+21p4 Un_Pressure_Calculator{22|9P8} 22r60 28r69 31r69
+22p4 Un_ADM{9|10P8}
+23i4 nb{integer}
+X 22 pressurecalculator.ads
+6K9*PressureCalculator 20|3w6 3r30 22|36e23
+9P8*T_PressureCalculator_Access(8R8) 20|21r38
+12V27*New_And_Initialize{9P8} 20|21s69
+X 23 pressuresensor.ads
+6K9*PressureSensor 20|4w6 4r26 23|29e19
+8R9*T_PressureSensor<21|4R9> 20|17r56 18r62 23|28e13
+9P9*T_PressureSensor_Access(8R9) 20|17r25 18r31
+11U14*registerObserver 20|27s4 30s4
+11r32 This{8R9} 20|27r21 30r21
+11p63 Observer{15|4P8} 20|28r21 31r21
+13U14*simuleMeasure 20|52s14 56s20 70s15 74s21 91s15 95s21 110s15 114s21
+. 146s15 150s21 154s21
+13i59 valeurMesure{integer} 20|52r28 56r34 70r29 74r35 91r29 95r35 110r29
+. 114r35 146r29 150r35 154r35
+13i86 idDevice{integer} 20|53r28 57r28 71r29 75r29 92r29 96r29 111r29 115r29
+. 147r29 151r29 155r29
+13b109 measureStatus{boolean} 20|54r28 58r34 72r29 76r29 93r29 97r29 112r29
+. 116r29 148r29 152r29 156r29
+X 42 vitesse_ecoulementcompressible.ads
+4K9*Vitesse_EcoulementCompressible 20|11w6 11r42 42|13e35
+X 43 vitesse_ecoulementincompressible.ads
+4K9*Vitesse_EcoulementIncompressible 20|12w6 12r44 43|14e37
 

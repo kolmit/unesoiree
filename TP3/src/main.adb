@@ -3,6 +3,13 @@ with ExternalADM; use ExternalADM;
 with PressureCalculator; use PressureCalculator;
 with PressureSensor; use PressureSensor;
 with Interface_ObserverPressure; use Interface_ObserverPressure;
+with Interface_StrategieFilter; use Interface_StrategieFilter;
+with Interface_StrategieVitesse; use Interface_StrategieVitesse;
+with Filter_Airbus; use Filter_Airbus;
+with Filter_Boeing; use Filter_Boeing;
+with Filter_Dassault; use Filter_Dassault;
+with Vitesse_EcoulementCompressible; use Vitesse_EcoulementCompressible;
+with Vitesse_EcoulementIncompressible; use Vitesse_EcoulementIncompressible;
 with ADM; use ADM;
 
 procedure Main is
@@ -34,9 +41,9 @@ procedure Main is
                                  idDevice      => 2,
                                  measureStatus => True);
 
-   --Un_External_ADM.simuleMeasure(valeurMesure  => 101011,
-   --                              idDevice      => 3,
-   --                              measureStatus => True);
+   Un_External_ADM.simuleMeasure(valeurMesure  => 101011,
+                                 idDevice      => 3,
+                                 measureStatus => True);
 
    Un_External_ADM.simuleMeasure(valeurMesure  => 100000,
                                  idDevice      => 5,
