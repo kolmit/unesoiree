@@ -10,7 +10,11 @@ package ExternalADM is
    
    procedure registerObserver (This: in out T_ExternalADM; Observer : in not null T_Interface_ObserverPressure_Access);
    procedure NotifyAllObservers (This: in out T_ExternalADM);
-   procedure simuleMeasure(This: in out T_ExternalADM; valeurMesure : in Integer; idDevice : in Integer; measureStatus : in Boolean);
+   procedure simuleMeasure(This: in out T_ExternalADM;
+                           valeurMesure : in Integer;
+                           idDevice : in Integer;
+                           measureStatus : in Boolean;
+                           isStaticMeasure : in Boolean);
 
 
 private
@@ -18,11 +22,13 @@ private
    function getMeasureValue(This: in out T_ExternalADM) return Integer;
    function getMeasureStatus(This: in out T_ExternalADM) return Boolean;
    function getDeviceId(This: in out T_ExternalADM) return Integer;
+   function getMeasureType(This: in out T_ExternalADM) return Boolean;
    
    type T_ExternalADM is new T_ObjetAncetre with record
       observerCollection: T_Interface_ObserverPressure_Access;
       currentMeasureValue: Integer;
       currentMeasureStatus: Boolean;
+      isStaticMeasure: Boolean;
       deviceId: Integer;
    end record;
    

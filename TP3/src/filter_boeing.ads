@@ -9,6 +9,7 @@ package Filter_Boeing is
 private
    type T_Filter_Boeing is new T_Interface_StrategieFilter with record
       lastPressure : Float :=  0.0;
+      isItFirstMeasure : Boolean := True;
    end record;
 
 end Filter_Boeing;

@@ -20,7 +20,8 @@ package body ExternalADM is
       if (This.observerCollection /= null) then
          This.observerCollection.notifyChange(idDevice      => This.getDeviceId,
                                               measureValue  => This.getMeasureValue,
-                                              measureStatus => This.getMeasureStatus);
+                                              measureStatus => This.getMeasureStatus,
+                                             isStaticMeasure => This.getMeasureType);
       end if;
 
    end NotifyAllObservers;
@@ -30,13 +31,15 @@ package body ExternalADM is
    procedure simuleMeasure(This: in out T_ExternalADM;
                            valeurMesure : in Integer;
                            idDevice : in Integer;
-                           measureStatus : in Boolean) is
+                           measureStatus : in Boolean;
+                           isStaticMeasure : in Boolean) is
    begin
       This.currentMeasureValue := valeurMesure;
       This.currentMeasureStatus := measureStatus;
+      This.isStaticMeasure := isStaticMeasure;
       This.deviceId := idDevice;
 
-      Put_Line("ExternalADM: Nouvelle mesure :" & Integer'Image(This.getMeasureValue) & " Pa");
+      Put_Line(ASCII.LF & ASCII.LF & "ExternalADM: Nouvelle mesure (type : " & Boolean'Image(This.isStaticMeasure) & ") :" & Integer'Image(This.getMeasureValue) & " Pa");
       This.NotifyAllObservers;
    end simuleMeasure;
 
@@ -59,4 +62,8 @@ package body ExternalADM is
    end getMeasureStatus;
 
 
+   function getMeasureType(This: in out T_ExternalADM) return Boolean is
+   begin
+      return This.isStaticMeasure;
+   end getMeasureType;
 end ExternalADM;

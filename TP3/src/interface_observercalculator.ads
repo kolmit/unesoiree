@@ -7,7 +7,9 @@ package Interface_ObserverCalculator is
 
    -- la méthode qui va être implémentée par l'ADM 
    procedure notifyChangeADM (This : access T_Interface_ObserverCalculator; 
-                           averagePressure : in Float) is abstract; 
+                              averageStaticPressure : in Float;
+                              averageTotalPressure : in Float;
+                              isStaticMeasure : in Boolean) is abstract; 
 
 
 

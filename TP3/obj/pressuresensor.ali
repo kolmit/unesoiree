@@ -13,16 +13,17 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U pressuresensor%b	pressuresensor.adb	a57dc95d OO PK
+U pressuresensor%b	pressuresensor.adb	cad05c14 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
-U pressuresensor%s	pressuresensor.ads	3f7a6be7 EE OO PF PK
+U pressuresensor%s	pressuresensor.ads	691bd612 EE OO PF PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -41,12 +42,12 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D interface_observerpressure.ads  20181112155818 cae20398 interface_observerpressure%s
+D interface_observerpressure.ads  20181203124250 3b31aba8 interface_observerpressure%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
-D pressuresensor.ads	20181112185554 3f26013a pressuresensor%s
-D pressuresensor.adb	20181112185618 12467b3d pressuresensor%b
+D pressuresensor.ads	20181203131052 989414ff pressuresensor%s
+D pressuresensor.adb	20181203195412 da59fbb1 pressuresensor%b
 D system.ads		20180524051738 32a08138 system%s
 D s-conca3.ads		20180524051738 0b705ca5 system.concat_3%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
@@ -72,43 +73,48 @@ X 1 ada.ads
 16K9*Ada 20e8 14|2r6 2r23
 X 7 a-textio.ads
 49K13*Text_IO 471e16 14|2w10 2r27
-263U14*Put_Line 14|39s7
+263U14*Put_Line 14|44s7
 X 9 interface_observerpressure.ads
-1K9*Interface_ObserverPressure 16e31 13|2w6 2r38
+1K9*Interface_ObserverPressure 17e31 13|2w6 2r38
 3h8*T_Interface_ObserverPressure
-4P8*T_Interface_ObserverPressure_Access(3R8) 13|11r86 24r27 14|9r30
-8x14*notifyChange 14|21R34
-9i28 idDevice{integer} 14|21r47
-10i28 measureValue{integer} 14|22r47
-11b28 measureStatus{boolean} 14|23r47
+4P8*T_Interface_ObserverPressure_Access(3R8) 13|11r86 25r27 14|11r30
+8x14*notifyChange 14|23R34
+9i28 idDevice{integer} 14|23r47
+10i28 measureValue{integer} 14|24r47
+11b28 measureStatus{boolean} 14|25r47
+12b28 isStaticMeasure{boolean} 14|26r47
 X 12 objetancetre.ads
 1K9*ObjetAncetre 6e17 13|1w6 1r24
-4H9*T_ObjetAncetre 4e54 13|8r33 23r33
+4H9*T_ObjetAncetre 4e54 13|8r33 24r33
 X 13 pressuresensor.ads
-6K9*PressureSensor 23E9 29l5 29e19 14|4b14 63l5 63t19
+6K9*PressureSensor 24E9 31l5 31e19 14|4b14 73l5 73t19
 8R9*T_PressureSensor<12|4R9> 9r47 11p14 11r45 12p14 12r47 13p14 13r41 16p13
-. 16r42 17p13 17r43 18p13 18r38 23c9 28e13 14|8r20 17r47 30r41 44r42 50r38
-. 56r43
+. 16r42 17p13 17r43 18p13 18r38 19p13 19r41 24c9 30e13 14|10r20 19r47 33r41
+. 49r42 55r38 61r43 67r41
 9P9*T_PressureSensor_Access(8R9)
-11U14*registerObserver 11=32 11>63 14|7b14 13l8 13t24
-11r32 This{8R9} 14|8b7 12m7
-11p63 Observer{9|4P8} 14|9b7 12r34
-12U14*NotifyAllObservers 12=34 14|17b14 26l8 26t26 40s12
-12r34 This{8R9} 14|17b34 20r11 21m10 21r10 21m64 21r64 22m64 22r64 23m64
-. 23r64
-13U14*simuleMeasure 13=28 13>59 13>86 13>109 14|30b14 41l8 41t21
-13r28 This{8R9} 14|30b28 35m7 36m7 37m7 39m60 39r60 40m7 40r7
-13i59 valeurMesure{integer} 14|31b28 35r35
-13i86 idDevice{integer} 14|32b28 37r24
-13b109 measureStatus{boolean} 14|33b28 36r36
-16V13*getMeasureValue{integer} 16=29 14|22s69 39s65 44b13 47l8 47t23
-16r29 This{8R9} 14|44b29 46r14
-17V13*getMeasureStatus{boolean} 17=30 14|23s69 56b13 59l8 59t24
-17r30 This{8R9} 14|56b30 58r14
-18V13*getDeviceId{integer} 18=25 14|21s69 50b13 53l8 53t19
-18r25 This{8R9} 14|50b25 52r14
-24p7 observerCollection{9|4P8} 14|12m12 20r16 21r15
-25i7 currentMeasureValue{integer} 14|35m12 46r19
-26b7 currentMeasureStatus{boolean} 14|36m12 58r19
-27i7 deviceId{integer} 14|37m12 52r19
+11U14*registerObserver 11=32 11>63 14|9b14 15l8 15t24
+11r32 This{8R9} 14|10b7 14m7
+11p63 Observer{9|4P8} 14|11b7 14r34
+12U14*NotifyAllObservers 12=34 14|19b14 29l8 29t26 45s12
+12r34 This{8R9} 14|19b34 22r11 23m10 23r10 23m64 23r64 24m64 24r64 25m64
+. 25r64 26m66 26r66
+13U14*simuleMeasure 13=28 13>59 13>86 13>109 13>137 14|33b14 46l8 46t21
+13r28 This{8R9} 14|33b28 39m7 40m7 41m7 42m7 44m82 44r82 45m7 45r7
+13i59 valeurMesure{integer} 14|34b28 39r35
+13i86 idDevice{integer} 14|35b28 42r24
+13b109 measureStatus{boolean} 14|36b28 40r36
+13b137 isStaticMeasure{boolean} 14|37b28 41r31
+16V13*getMeasureValue{integer} 16=29 14|24s69 44s87 49b13 52l8 52t23
+16r29 This{8R9} 14|49b29 51r14
+17V13*getMeasureStatus{boolean} 17=30 14|25s69 61b13 64l8 64t24
+17r30 This{8R9} 14|61b30 63r14
+18V13*getDeviceId{integer} 18=25 14|23s69 55b13 58l8 58t19
+18r25 This{8R9} 14|55b25 57r14
+19V13*getMeasureType{boolean} 19=28 14|26s71 67b13 70l8 70t22
+19r28 This{8R9} 14|67b28 69r14
+25p7 observerCollection{9|4P8} 14|14m12 22r16 23r15
+26i7 currentMeasureValue{integer} 14|39m12 51r19
+27b7 currentMeasureStatus{boolean} 14|40m12 63r19
+28b7 isStaticMeasure{boolean} 14|41m12 69r19
+29i7 deviceId{integer} 14|42m12 57r19
 

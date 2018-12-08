@@ -4,6 +4,8 @@ with Ada.Text_IO; use Ada.Text_IO;
 package body PressureSensor is
 
 
+
+
    procedure registerObserver
      (This: in out T_PressureSensor;
       Observer : in not null T_Interface_ObserverPressure_Access) is
@@ -20,7 +22,8 @@ package body PressureSensor is
       if (This.observerCollection /= null) then
          This.observerCollection.notifyChange(idDevice      => This.getDeviceId,
                                               measureValue  => This.getMeasureValue,
-                                              measureStatus => This.getMeasureStatus);
+                                              measureStatus => This.getMeasureStatus,
+                                              isStaticMeasure => This.getMeasureType);
       end if;
 
    end NotifyAllObservers;
@@ -30,13 +33,15 @@ package body PressureSensor is
    procedure simuleMeasure(This: in out T_PressureSensor;
                            valeurMesure : in Integer;
                            idDevice : in Integer;
-                           measureStatus : in Boolean) is
+                           measureStatus : in Boolean;
+                           isStaticMeasure : in Boolean) is
    begin
       This.currentMeasureValue := valeurMesure;
       This.currentMeasureStatus := measureStatus;
+      This.isStaticMeasure := isStaticMeasure;
       This.deviceId := idDevice;
 
-      Put_Line("Sensor: Nouvelle mesure :" & Integer'Image(This.getMeasureValue) & " Pa");
+      Put_Line(ASCII.LF & ASCII.LF & "Sensor: Nouvelle mesure :" & Integer'Image(This.getMeasureValue) & " Pa");
       This.NotifyAllObservers;
    end simuleMeasure;
 
@@ -58,6 +63,11 @@ package body PressureSensor is
       return This.currentMeasureStatus;
    end getMeasureStatus;
 
+
+   function getMeasureType(This: in out T_PressureSensor) return Boolean is
+   begin
+      return This.isStaticMeasure;
+   end getMeasureType;
 
 
 end PressureSensor;

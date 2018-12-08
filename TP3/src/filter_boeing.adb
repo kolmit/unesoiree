@@ -1,12 +1,24 @@
-pragma Ada_2012;
+with GNAT.IO; use GNAT.IO;
+
 package body Filter_Boeing is
 
    overriding function filterPressure (This : access T_Filter_Boeing; pressure : in Float) return Float
    is
-      result : Float := (pressure + This.lastPressure)/2.0;
+      filterOutput : Float := 0.0;
    begin
+      -- Pas de filtrage pour la 1ère valeur p(0)
+      if (This.isItFirstMeasure = True) then
+        This.isItFirstMeasure := False;
+         filterOutput := pressure;
+      else
+         filterOutput := (pressure + This.lastPressure)/2.0;
+      end if;
+
+      Put_Line("KRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR BOEING");
       This.lastPressure := pressure;
-      return result;
+
+
+      return filterOutput;
    end filterPressure;
 
 end Filter_Boeing;

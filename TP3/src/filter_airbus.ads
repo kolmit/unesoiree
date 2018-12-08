@@ -15,6 +15,7 @@ private
    type T_Filter_Airbus is new T_Interface_StrategieFilter with record
       cst_a : Float;
       lastPressure : Float := 0.0;
+      isItFirstMeasure : Boolean := True;
    end record;
 
 

@@ -15,10 +15,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U filter_airbus%b	filter_airbus.adb	cb4a64a7 OO PK
+U filter_airbus%b	filter_airbus.adb	10f2889d OO PK
+W gnat%s		gnat.ads		gnat.ali
+W gnat.io%s		g-io.adb		g-io.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U filter_airbus%s	filter_airbus.ads	eb1c2d29 EE OO PF PK
+U filter_airbus%s	filter_airbus.ads	030f37a5 EE OO PF PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -34,9 +36,11 @@ D a-finali.ads		20180524051738 bf4f806b ada.finalization%s
 D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D filter_airbus.ads	20181129162926 ad2b1051 filter_airbus%s
-D filter_airbus.adb	20181129202308 666174f6 filter_airbus%b
-D interface_strategiefilter.ads  20181129162042 46373d78 interface_strategiefilter%s
+D filter_airbus.ads	20181204150830 45380add filter_airbus%s
+D filter_airbus.adb	20181204154330 cac7b8f2 filter_airbus%b
+D gnat.ads		20180524051738 fd2ad2f1 gnat%s
+D g-io.ads		20180524051736 9f0d3ab2 gnat.io%s
+D interface_strategiefilter.ads  20181204081624 46373d78 interface_strategiefilter%s
 D system.ads		20180524051738 32a08138 system%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
 D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
@@ -54,19 +58,26 @@ D s-stratt.ads		20180524051736 aedef97e system.stream_attributes%s
 D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
 X 7 filter_airbus.ads
-4K9*Filter_Airbus 15E9 21l5 21e18 8|1b14 21l5 21t18
-6R9*T_Filter_Airbus<9|3R9> 9r48 12P24 12r53 15c9 18e14 8|5r48 6r17 14r53
-8K12*Constructor 10l8 10e19 8|3b17 12l8 12t19
-9V16*Initialize{6R9} 9>27 8|5b16 10l11 10t21
-9f27 a{float} 8|5b27 8r24
-12V24*filterPressure{float}<9|6p13> 12^39 12>70 8|14b24 19l8 19t22
-12p39 This(6R9) 8|14b39 17r7 17r39 17r50 18r14
-12f70 pressure{float} 8|14b70 17r28
-16f7 cst_a{float} 8|8m15 17r44
-17f7 lastPressure{float} 8|17m12 17r55 18r19
+4K9*Filter_Airbus 15E9 22l5 22e18 8|2b14 35l5 35t18
+6R9*T_Filter_Airbus<11|3R9> 9r48 12P24 12r53 15c9 19e14 8|6r48 7r17 16r54
+8K12*Constructor 10l8 10e19 8|4b17 13l8 13t19
+9V16*Initialize{6R9} 9>27 8|6b16 11l11 11t21
+9f27 a{float} 8|6b27 9r24
+12V24*filterPressure{float}<11|6p13> 12^39 12>70 8|16b24 34l8 34t22
+12p39 This(6R9) 8|16b40 21r11 22r9 26r37 26r48 30r7
+12f70 pressure{float} 8|16b71 23r26 26r26
+16f7 cst_a{float} 8|9m15 26r42
+17f7 lastPressure{float} 8|26r53 30m12
+18b7 isItFirstMeasure{boolean} 8|21r16 22m14
 X 8 filter_airbus.adb
-6r10 This{7|6R9} 8m10 9r17
-X 9 interface_strategiefilter.ads
-1K9*Interface_StrategieFilter 7|1w6 1r37 9|9e30
+7r10 This{7|6R9} 9m10 10r17
+18f7 filterOutput{float} 23m10 26m10 30r28 33r14
+X 9 gnat.ads
+34K9*GNAT 8|1r6 1r19 9|37e9
+X 10 g-io.ads
+41K14*IO 8|1w11 1r24 10|91e12
+72U14*Put_Line 8|29s7
+X 11 interface_strategiefilter.ads
+1K9*Interface_StrategieFilter 7|1w6 1r37 11|9e30
 3h9*T_Interface_StrategieFilter 7|6r32 15r32
 

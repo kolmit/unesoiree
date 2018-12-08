@@ -1,3 +1,5 @@
+with GNAT.IO; use GNAT.IO;
+
 package body Filter_Dassault is
 
    overriding function filterPressure
@@ -6,6 +8,7 @@ package body Filter_Dassault is
       return Float
    is
    begin
+      Put_Line("KRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR DASSAULT");
       return pressure;
    end filterPressure;
 

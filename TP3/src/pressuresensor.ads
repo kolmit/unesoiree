@@ -10,12 +10,13 @@ package PressureSensor is
    
    procedure registerObserver (This: in out T_PressureSensor; Observer : in not null T_Interface_ObserverPressure_Access);
    procedure NotifyAllObservers (This: in out T_PressureSensor);
-   procedure simuleMeasure(This: in out T_PressureSensor; valeurMesure : in Integer; idDevice : in Integer; measureStatus : in Boolean);
+   procedure simuleMeasure(This: in out T_PressureSensor; valeurMesure : in Integer; idDevice : in Integer; measureStatus : in Boolean; isStaticMeasure : in Boolean);
 
    
    function getMeasureValue(This: in out T_PressureSensor) return Integer;
    function getMeasureStatus(This: in out T_PressureSensor) return Boolean;
    function getDeviceId(This: in out T_PressureSensor) return Integer;
+   function getMeasureType(This: in out T_PressureSensor) return Boolean;
 
 
 private
@@ -24,6 +25,7 @@ private
       observerCollection: T_Interface_ObserverPressure_Access;
       currentMeasureValue: Integer;
       currentMeasureStatus: Boolean;
+      isStaticMeasure: Boolean;
       deviceId: Integer;
   end record;
 end PressureSensor;

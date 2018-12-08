@@ -8,7 +8,8 @@ package Interface_ObserverPressure is
    procedure notifyChange (This : access T_Interface_ObserverPressure; 
                            idDevice : in Integer; 
                            measureValue : in Integer; 
-                           measureStatus : in Boolean) is abstract; 
+                           measureStatus : in Boolean;
+                           isStaticMeasure : in Boolean) is abstract; 
 
 
 
