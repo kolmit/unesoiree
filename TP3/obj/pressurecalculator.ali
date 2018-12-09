@@ -20,7 +20,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pressurecalculator%b	pressurecalculator.adb	20ceac5d OO PK
+U pressurecalculator%b	pressurecalculator.adb	36424d68 OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W filter_airbus%s	filter_airbus.adb	filter_airbus.ali
 W filter_boeing%s	filter_boeing.adb	filter_boeing.ali
@@ -66,7 +66,7 @@ D interface_observerpressure.ads  20181203124250 3b31aba8 interface_observerpres
 D interface_strategiefilter.ads  20181204081624 46373d78 interface_strategiefilter%s
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
 D pressurecalculator.ads  20181204160502 ca43a778 pressurecalculator%s
-D pressurecalculator.adb  20181204160506 0ee53f1b pressurecalculator%b
+D pressurecalculator.adb  20181209124710 1869de2e pressurecalculator%b
 D system.ads		20180524051738 32a08138 system%s
 D s-conca3.ads		20180524051738 0b705ca5 system.concat_3%s
 D s-conca4.ads		20180524051738 7e642b20 system.concat_4%s
@@ -103,16 +103,16 @@ X 11 gnat.ads
 34K9*GNAT 37e9 18|1r6 1r19
 X 12 g-io.ads
 41K14*IO 91e12 18|1w11 1r24
-72U14*Put_Line 18|69s16 70s16 78s16 79s16 88s16 89s16 97s16 98s16 103s16
+72U14*Put_Line 18|68s16 69s16 77s16 78s16 85s16 86s16 94s16 95s16 103s16
 . 104s16 124s13 151s13
 X 13 interface_observercalculator.ads
 1K9*Interface_ObserverCalculator 17e33 17|2w6 2r40
 4h8*T_Interface_ObserverCalculator
 5P8*T_Interface_ObserverCalculator_Access(4R8) 17|26r93 44r31 18|169r30
-9x14*notifyChangeADM 18|80R43 99R43
-10f31 averageStaticPressure{float} 18|80r59 99r59
-11f31 averageTotalPressure{float} 18|81r59 100r59
-12b31 isStaticMeasure{boolean} 18|82r59 101r59
+9x14*notifyChangeADM 18|98R43
+10f31 averageStaticPressure{float} 18|98r59
+11f31 averageTotalPressure{float} 18|99r59
+12b31 isStaticMeasure{boolean} 18|100r59
 X 14 interface_observerpressure.ads
 1K9*Interface_ObserverPressure 17e31 17|1w6 1r38
 3h8*T_Interface_ObserverPressure 17|10r69 37r69
@@ -122,8 +122,8 @@ X 15 interface_strategiefilter.ads
 3h9*T_Interface_StrategieFilter 17|10r37 37r37
 4P9*T_Interface_StrategieFilter_Access(3R9) 17|14r75 18r66 19r67 42r53 18|9r75
 . 33r66 34r67
-6y13*filterPressure{float} 18|76R74 95R72
-6f71 pressure{float} 18|76r89 95r87
+6y13*filterPressure{float} 18|75R74 92R72
+6f71 pressure{float} 18|75r89 92r87
 X 16 objetancetre.ads
 1K9*ObjetAncetre 6e17 17|4w6 4r24
 X 17 pressurecalculator.ads
@@ -143,12 +143,11 @@ X 17 pressurecalculator.ads
 19p48 filter_static{15|4P9} 18|34b48 43r148
 20U24*notifyChange<14|8p14> 20^38 21>38 22>38 23>38 24>38 18|51b25 107l8
 . 107t20
-20p38 This(10R9) 18|51b39 68r15 69r117 73r16 73r46 76r16 76r47 78r102 79r102
-. 80r16 80r84 81r83 87r16 88r117 92r16 92r45 95r16 95r46 97r100 98r100 99r16
-. 99r84 100r83
-21i38 idDevice{integer} 18|52b39 68r43 69r84 69r145 87r43 88r84 88r144
-22i38 measureValue{integer} 18|53b39 63r16 63r37 68r56 76r107 87r56 95r105
-23b38 measureStatus{boolean} 18|54b39 62r13
+20p38 This(10R9) 18|51b39 67r15 68r117 72r16 72r46 75r16 75r47 77r102 78r102
+. 84r16 85r117 89r16 89r45 92r16 92r46 94r100 95r100 98r16 98r84 99r83
+21i38 idDevice{integer} 18|52b39 67r43 68r84 68r145 84r43 85r84 85r144
+22i38 measureValue{integer} 18|53b39 62r16 62r37 67r56 75r107 84r56 92r105
+23b38 measureStatus{boolean} 18|54b39 61r13
 24b38 isStaticMeasure{boolean} 18|55b39
 26U14*registerObserverADM 26=35 26>70 18|167b14 173l8 173t27
 26r35 This{10R9} 18|168b7 172m7
@@ -158,20 +157,20 @@ X 17 pressurecalculator.ads
 29V13*filterPressure{float}<15|6p13> 29^28 29>64 18|200b24 204l8 204t22
 29p28 This(10R9) 18|200b39
 29f64 pressure{float} 18|200b75
-33V13 calculAverageTotalPressure{float} 33^41 18|92s50 139b28 163l8 163t34
+33V13 calculAverageTotalPressure{float} 33^41 18|89s50 139b28 163l8 163t34
 33p41 This(10R9) 18|139b56 147r33
-34V13 calculAverageStaticPressure{float} 34^42 18|73s51 112b28 135l8 135t35
+34V13 calculAverageStaticPressure{float} 34^42 18|72s51 112b28 135l8 135t35
 34p42 This(10R9) 18|112b57 120r33
 36A9 T_Sources_Array(integer)<integer> 38r32 39r31
-38a7 mesureStaticCollection{36A9} 18|14r41 15m18 68m20 69r122 120r38
-39a7 mesureTotalCollection{36A9} 18|19r41 20m18 87m21 88r122 147r38
-40f7 averageStaticPressure{float} 18|26m15 73m21 78r107 80r89 99r89 188r19
-40f30 averageTotalPressure{float} 18|25m15 81r88 92m21 97r105 100r88 194r19
-41f7 filteredStaticPressure{float} 18|76m21 79r107
-41f30 filteredTotalPressure{float} 18|95m21 98r105
-42p7 filter_staticPressure{15|4P9} 18|23m15 76r52
-42p30 filter_totalPressure{15|4P9} 18|24m15 95r51
-44p7 observerCollectionADM{13|5P8} 18|80r21 99r21 172m12 178r16
+38a7 mesureStaticCollection{36A9} 18|14r41 15m18 67m20 68r122 120r38
+39a7 mesureTotalCollection{36A9} 18|19r41 20m18 84m21 85r122 147r38
+40f7 averageStaticPressure{float} 18|26m15 72m21 77r107 98r89 188r19
+40f30 averageTotalPressure{float} 18|25m15 89m21 94r105 99r88 194r19
+41f7 filteredStaticPressure{float} 18|75m21 78r107
+41f30 filteredTotalPressure{float} 18|92m21 95r105
+42p7 filter_staticPressure{15|4P9} 18|23m15 75r52
+42p30 filter_totalPressure{15|4P9} 18|24m15 92r51
+44p7 observerCollectionADM{13|5P8} 18|98r21 172m12 178r16
 47V13 getAverageStaticPressure{float} 47=38 18|186b13 189l8 189t32
 47r38 This{10R9} 18|186b38 188r14
 48V13 getAverageTotalPressure{float} 48=37 18|192b16 195l8 195t31
@@ -182,15 +181,15 @@ X 18 pressurecalculator.adb
 14i14 tmpValue=14:14{integer}
 19i14 tmpValue=19:14{integer}
 43p14 PressureCalculator{17|11P9} 45r96
-56i7 p0{integer} 63r52
+56i7 p0{integer} 62r52
 113i7 index{integer} 124r45 126m10 126r19
 114i7 okValueCounter{integer} 122m13 122r31 130r11 131r64
 115i7 totalStaticPressure{integer} 123m13 123r36 131r44
 117f7 tmpAverageStaticPressure{float} 131m10 134r16
 120i11 tmpValue=120:11{integer} 121r14 123r58 124r78
-140i7 index{integer} 151r45 153m10 153r19
+140i7 index{integer} 151r52 153m10 153r19
 141i7 okValueCounter{integer} 149m13 149r31 157r11 159r62
 142i7 totalTotalPressure{integer} 150m13 150r35 159r43
 144f7 tmpAverageTotalPressure{float} 159m10 162r14
-147i11 tmpValue=147:11{integer} 148r14 150r56 151r78
+147i11 tmpValue=147:11{integer} 148r14 150r56 151r84
 

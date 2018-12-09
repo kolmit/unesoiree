@@ -11,6 +11,7 @@ with Filter_Dassault; use Filter_Dassault;
 with Vitesse_EcoulementCompressible; use Vitesse_EcoulementCompressible;
 with Vitesse_EcoulementIncompressible; use Vitesse_EcoulementIncompressible;
 with ADM; use ADM;
+with SpeedFormulaSelector; use SpeedFormulaSelector;
 
 procedure Main is
    Un_External_ADM : constant T_ExternalADM_Access := new T_ExternalADM;
@@ -23,7 +24,7 @@ procedure Main is
                                                                                        new T_Filter_Airbus'(Filter_Airbus.Constructor.Initialize(0.01)));
 
    Un_ADM : constant T_ADM_Access := New_And_InitializeADM(Un_Pressure_Calculator,
-                                                           new T_Vitesse_EcoulementIncompressible);
+                                                           new T_SpeedFormulaSelector);
    nb : Integer := 10;
 
    begin

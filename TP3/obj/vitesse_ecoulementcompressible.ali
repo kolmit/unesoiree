@@ -17,7 +17,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U vitesse_ecoulementcompressible%b  vitesse_ecoulementcompressible.adb  312fce99 OO PK
+U vitesse_ecoulementcompressible%b  vitesse_ecoulementcompressible.adb  da242f40 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -70,30 +70,33 @@ D s-stoele.adb		20180524051736 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20180524051736 b16154c2 system.storage_pools%s
 D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
 D vitesse_ecoulementcompressible.ads  20181129202800 b43fd72d vitesse_ecoulementcompressible%s
-D vitesse_ecoulementcompressible.adb  20181204161156 56f9762a vitesse_ecoulementcompressible%b
+D vitesse_ecoulementcompressible.adb  20181209124736 bdf297f3 vitesse_ecoulementcompressible%b
 X 1 ada.ads
 16K9*Ada 20e8 33|2r6 7r35
 X 4 a-numeri.ads
 16K13*Numerics 32e17 33|2r10 7r39
 X 6 a-ngelfu.ads
 39k22*Generic_Elementary_Functions 205e46 33|2w19 7r48
+52V13*Sqrt{float} 33|16s39[7]
 X 11 gnat.ads
 34K9*GNAT 37e9 33|1r6 1r19
 X 12 g-io.ads
 41K14*IO 91e12 33|1w11 1r24
-72U14*Put_Line 33|15s13
+72U14*Put_Line 33|15s7
 X 13 interface_strategievitesse.ads
 1K9*Interface_StrategieVitesse 9e31 32|1w6 1r38
 3h9*T_Interface_StrategieVitesse 32|6r49 11r49
 X 14 physicconstants.ads
 1K9*PhysicConstants 12e20 33|3w6 3r27
+7f4*GAMMA{float} 33|16r50 16r108 16r119
+8f4*V_SON{float} 33|16r15
 X 32 vitesse_ecoulementcompressible.ads
-4K9*Vitesse_EcoulementCompressible 11E9 13l5 13e35 33|6b14 20l5 20t35
+4K9*Vitesse_EcoulementCompressible 11E9 13l5 13e35 33|6b14 19l5 19t35
 6R9*T_Vitesse_EcoulementCompressible<13|3R9> 7P24 7r52 11c9 11e94 33|10r21
-7V24*calculVitesse{float}<13|6p13> 7^38 7>86 7>101 33|9b24 18l8 18t21
+7V24*calculVitesse{float}<13|6p13> 7^38 7>86 7>101 33|9b24 17l8 17t21
 7p38 This(6R9) 33|10b7
-7f86 totalPressure{float} 33|11b7
-7f101 staticPressure{float} 33|11b22
+7f86 totalPressure{float} 33|11b7 16r67
+7f101 staticPressure{float} 33|11b22 16r81
 X 33 vitesse_ecoulementcompressible.adb
-7K12 Float_Functions[6|39]
+7K12 Float_Functions[6|39] 16r23
 

@@ -39,12 +39,12 @@ package body ADM is
                                         isStaticChange : in boolean)
    is
    begin
-      Put_Line("      ADM : La pression moyenne a change !");
       This.averageStaticPressureFromCalculator := averageStaticPressure;
       This.averageTotalPressureFromCalculator := averageTotalPressure;
       This.currentAltitude := This.calculAltitude(isStaticChange);
       Put_Line("      ADM : Altitude calculee ---> " & Float'Image(This.currentAltitude) & "m");
-      This.currentSpeed := This.calculVitesse(averageTotalPressure, averageStaticPressure);
+      This.currentSpeed := This.calculVitesse(This.averageTotalPressureFromCalculator,
+                                              This.averageStaticPressureFromCalculator);
    end notifyChangeADM;
 
 
@@ -61,23 +61,14 @@ package body ADM is
       package Float_Functions is new Ada.Numerics.Generic_Elementary_Functions (Float);
 
    begin
-      -- ln(p0/p)
       if (isStaticChange = true) then
          tmpAverage := This.averageStaticPressureFromCalculator;
       else
          tmpAverage := This.averageTotalPressureFromCalculator;
       end if;
 
---        if (This.averageTotalPressureFromCalculator <= 0.0) then
---           tmpAverage := This.averageStaticPressureFromCalculator;
---           Put_Line("1 - LA PRESSION MOYENNE :" & Float'Image(tmpAverage));
---
---        elsif(This.averageStaticPressureFromCalculator <= 0.0) then
---           tmpAverage := This.averageTotalPressureFromCalculator;
---           Put_Line("2 - LA PRESSION MOYENNE :" & Float'Image(tmpAverage));
---
---        end if;
 
+      -- ln(p0/p)
       ln := Float_Functions.Log(p0/tmpAverage, Ada.Numerics.e);
 
       This.currentAltitude := (R*T0)/(M*g)*ln;
@@ -93,7 +84,8 @@ package body ADM is
        res := This.speedStrategy.calculVitesse(totalPessure   => totalPessure,
                                                staticPressure => staticPressure);
 
-      Put_Line("      ADM : Vitesse calculee ---> " & Float'Image(res) & " m/s");
+      Put_Line("      ADM : Vitesse calculee ---> " & Float'Image(res) & " m/s" & ASCII.LF);
+
       return res;
    end calculVitesse;
 

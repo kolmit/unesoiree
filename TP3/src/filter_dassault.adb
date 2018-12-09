@@ -8,7 +8,7 @@ package body Filter_Dassault is
       return Float
    is
    begin
-      Put_Line("KRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR DASSAULT");
+      Put_Line(ASCII.LF & "   [Filtrage] = DASSAULT");
       return pressure;
    end filterPressure;
 

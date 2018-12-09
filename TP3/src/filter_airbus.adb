@@ -26,7 +26,7 @@ package body Filter_Airbus is
          filterOutput := pressure + This.cst_a*This.lastPressure;
       end if;
    
-      Put_Line("KRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR AIRBUS");
+      Put_Line("   [Filtrage] = AIRBUS");
       This.lastPressure := filterOutput;
 
    

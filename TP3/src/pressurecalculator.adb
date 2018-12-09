@@ -56,9 +56,8 @@ package body PressureCalculator is
       p0 : Integer := 101315;
    begin
 
-      -- Le tableau "mesureStaticCollection" stocke les valeurs dont le status est OK.
+      -- Les tableaux "mesureStaticCollection" et "mesureTotalCollection" stocke les valeurs dont le status est OK.
       -- ex: pour le device dont l'ID est 1, la valeur sera stockée à l'index 1 du tableau: mesureStaticCollection(1)
-      -- Note : Un tableau associatif serait plus adapté.
          if measureStatus then
             if measureValue > 0 and measureValue < p0 then
 
@@ -77,9 +76,7 @@ package body PressureCalculator is
 
                Put_Line("   PressureCalculator: Pression STATIQUE moyenne actuelle : " & Float'Image(This.averageStaticPressure) & "Pa");
                Put_Line("   PressureCalculator: Pression STATIQUE filtree actuelle : " & Float'Image(This.filteredStaticPressure) & "Pa");
-               This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.averageStaticPressure,
-                                                          averageTotalPressure => This.averageTotalPressure,
-                                                          isStaticMeasure => True); -- On notifie l'ADM de la nouvelle pression moyenne)
+
 
                -----------
                -- TOTAL --
@@ -96,9 +93,12 @@ package body PressureCalculator is
 
                Put_Line("   PressureCalculator: Pression TOTALE moyenne actuelle : " & Float'Image(This.averageTotalPressure) & "Pa");
                Put_Line("   PressureCalculator: Pression TOTALE filtree actuelle : " & Float'Image(This.filteredTotalPressure) & "Pa");
+
+               -- On notifie l'ADM des nouvelles pressions moyennes)
                This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.averageStaticPressure,
                                                           averageTotalPressure => This.averageTotalPressure,
-                                                          isStaticMeasure => False); -- On notifie l'ADM de la nouvelle pression moyenne)
+                                                          isStaticMeasure => False);
+
             else
                Put_Line("   PressureCalculator: Mesure KO.");
                Put_Line("   PressureCalculator: Pression STATIQUE moyenne inchangee.");
@@ -148,7 +148,7 @@ package body PressureCalculator is
          if (tmpValue /= 0) then
             okValueCounter := okValueCounter + 1;
             totalTotalPressure := totalTotalPressure + tmpValue;
-            Put_Line("   [" & Integer'Image(index) & " ] = " & Integer'Image(tmpValue));
+            Put_Line("   [Device " & Integer'Image(index) & "] = " & Integer'Image(tmpValue) & " Pa" );
          end if;
          index := index + 1;
 

@@ -14,7 +14,7 @@ package body Filter_Boeing is
          filterOutput := (pressure + This.lastPressure)/2.0;
       end if;
 
-      Put_Line("KRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR BOEING");
+      Put_Line("   [Filtrage] = BOEING");
       This.lastPressure := pressure;
 
 
