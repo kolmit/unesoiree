@@ -42,7 +42,7 @@ package body ADM is
       This.averageStaticPressureFromCalculator := averageStaticPressure;
       This.averageTotalPressureFromCalculator := averageTotalPressure;
       This.currentAltitude := This.calculAltitude(isStaticChange);
-      Put_Line("      ADM : Altitude calculee ---> " & Float'Image(This.currentAltitude) & "m");
+      Put_Line("      ADM : Altitude calculee ---> " & Integer'Image(Integer(This.currentAltitude)) & "m");
       This.currentSpeed := This.calculVitesse(This.averageTotalPressureFromCalculator,
                                               This.averageStaticPressureFromCalculator);
    end notifyChangeADM;
@@ -79,14 +79,13 @@ package body ADM is
 
    overriding function calculVitesse(This : access T_ADM; totalPessure, staticPressure : in Float) return Float
    is
-      res : Float := 0.0;
    begin
-       res := This.speedStrategy.calculVitesse(totalPessure   => totalPessure,
-                                               staticPressure => staticPressure);
+       This.currentSpeed := This.speedStrategy.calculVitesse(totalPessure   => totalPessure,
+                                                             staticPressure => staticPressure);
 
-      Put_Line("      ADM : Vitesse calculee ---> " & Float'Image(res) & " m/s" & ASCII.LF);
+      Put_Line("      ADM : Vitesse calculee ---> " & Integer'Image(Integer(This.currentSpeed)) & " m/s" & ASCII.LF);
 
-      return res;
+      return This.currentSpeed;
    end calculVitesse;
 
 

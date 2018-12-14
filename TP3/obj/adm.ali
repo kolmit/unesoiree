@@ -24,7 +24,7 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U adm%b			adm.adb			6ec21cd8 OO PK IU
+U adm%b			adm.adb			f6d7a331 OO PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -36,7 +36,7 @@ Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.concat_4%s	s-conca4.adb		s-conca4.ali
 Z system.exn_llf%s	s-exnllf.adb		s-exnllf.ali
 Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
-Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
@@ -74,8 +74,8 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D adm.ads		20181209102054 1eedffbc adm%s
-D adm.adb		20181209123742 255e815d adm%b
+D adm.ads		20181212121330 1eedffbc adm%s
+D adm.adb		20181212121320 bd4b3eb4 adm%b
 D externaladm.ads	20181203124554 60db298e externaladm%s
 D interface_observercalculator.ads  20181204084250 1b8f1f82 interface_observercalculator%s
 D interface_observerpressure.ads  20181203124250 3b31aba8 interface_observerpressure%s
@@ -96,7 +96,7 @@ D s-fatgen.ads		20180524051738 49cbaf86 system.fat_gen%s
 D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
 D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
 D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
-D s-imgrea.ads		20180524051736 c7a851e2 system.img_real%s
+D s-imgint.ads		20180524051736 02dbe0c2 system.img_int%s
 D s-memory.ads		20180524051736 597d6634 system.memory%s
 D s-parame.ads		20180524051738 48ec542b system.parameters%s
 D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
@@ -123,9 +123,9 @@ X 7 a-ngelfu.ads
 79V13 Log{float} 14|72s29[61]
 X 11 a-textio.ads
 49K13*Text_IO 471e16 13|3w10 3r27
-263U14*Put_Line 14|45s7 87s7
+263U14*Put_Line 14|45s7 86s7
 X 13 adm.ads
-8K9*ADM 31E9 45l5 45e8 14|6b14 93l5 93t8
+8K9*ADM 31E9 45l5 45e8 14|6b14 92l5 92t8
 10R9*T_ADM<16|4R8><19|3R9> 11r36 14r88 22P25 22r54 26P24 26r52 31c9 37e14
 . 40p28 40r58 14|9r88 10r16 29r48 36r54 52r58 80r52
 11P9*T_ADM_Access(10R9) 21r115 14|26r71 29r28
@@ -136,22 +136,22 @@ X 13 adm.ads
 20p51 Le_Calculator{23|11P9} 14|25b7 30r31
 21p51 strategyChosen{19|4P9} 14|26b7 29r96
 22U25*notifyChangeADM<16|9p14> 22^41 23>41 24>41 25>41 14|36b25 48l8 48t23
-22p41 This(10R9) 14|36b41 42r7 43r7 44r7 44r31 45r68 46r7 46r28 46r47 47r47
+22p41 This(10R9) 14|36b41 42r7 43r7 44r7 44r31 45r78 46r7 46r28 46r47 47r47
 23f41 averageStaticPressure{float} 14|37b41 42r51
 24f41 averageTotalPressure{float} 14|38b41 43r50
 25b41 isStaticChange{boolean} 14|39b41 44r51
-26V24*calculVitesse{float}<19|6p13> 26^38 26>59 26>73 14|46s33 80b24 90l8
-. 90t21
-26p38 This(10R9) 14|80b38 84r15
-26f59 totalPessure{float} 14|80b59 84r66
-26f73 staticPressure{float} 14|80b73 85r66
-32f7 currentAltitude{float} 14|13m15 44m12 45r73 74m12 75r19
-32f24 currentSpeed{float} 14|14m15 46m12
+26V24*calculVitesse{float}<19|6p13> 26^38 26>59 26>73 14|46s33 80b24 89l8
+. 89t21
+26p38 This(10R9) 14|80b38 83r8 83r29 86r77 88r14
+26f59 totalPessure{float} 14|80b59 83r80
+26f73 staticPressure{float} 14|80b73 84r80
+32f7 currentAltitude{float} 14|13m15 44m12 45r83 74m12 75r19
+32f24 currentSpeed{float} 14|14m15 46m12 83m13 86r82 88r19
 34f7 averageStaticPressureFromCalculator{float} 14|17m15 42m12 47r52 65r29
 34f44 averageTotalPressureFromCalculator{float} 14|18m15 43m12 46r52 67r29
 35p7 staticPressure{18|4P9}
 35p23 totalPressure{18|4P9}
-36p7 speedStrategy{19|4P9} 14|15m15 84r20
+36p7 speedStrategy{19|4P9} 14|15m15 83r34
 40V28 calculAltitude{float} 40^44 40>65 41r19 14|44s36 52b28 76l8 76t22
 40p44 This(10R9) 14|52b44 65r24 67r24 74r7 75r14
 40b65 isStaticChange{boolean} 14|52b65 64r11
@@ -166,7 +166,6 @@ X 14 adm.adb
 58f7 ln{float} 72m7 74r44
 60f7 tmpAverage{float} 65m10 67m10 72r36
 61K15 Float_Functions[7|39] 72r13
-82f7 res{float} 84m8 87r67 89r14
 X 16 interface_observercalculator.ads
 1K9*Interface_ObserverCalculator 13|2w6 2r40 16|17e33
 4h8*T_Interface_ObserverCalculator 13|10r22 31r22
@@ -182,9 +181,9 @@ X 19 interface_strategievitesse.ads
 3h9*T_Interface_StrategieVitesse 13|10r57 31r57
 4P9*T_Interface_StrategieVitesse_Access(3R9) 13|14r44 21r71 36r23 14|9r44
 . 26r27
-6y13*calculVitesse{float} 14|84R34
-6f71 totalPessure{float} 14|84r48
-6f85 staticPressure{float} 14|85r48
+6y13*calculVitesse{float} 14|83R48
+6f71 totalPessure{float} 14|83r62
+6f85 staticPressure{float} 14|84r62
 X 23 pressurecalculator.ads
 8K9*PressureCalculator 13|1w6 1r31 23|51e23
 11P9*T_PressureCalculator_Access(10R9) 13|20r79 14|25r35

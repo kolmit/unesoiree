@@ -13,11 +13,12 @@ RV NO_FLOATING_POINT
 RV NO_IMPLICIT_CONDITIONALS
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U vitesse_ecoulementcompressible%b  vitesse_ecoulementcompressible.adb  da242f40 OO PK
+U vitesse_ecoulementcompressible%b  vitesse_ecoulementcompressible.adb  7c2bb026 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -26,15 +27,23 @@ W ada.numerics.generic_elementary_functions%s
 W gnat%s		gnat.ads		gnat.ali
 W gnat.io%s		g-io.adb		g-io.ali
 W physicconstants%s	physicconstants.ads	physicconstants.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.exn_llf%s	s-exnllf.adb		s-exnllf.ali
 Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 
-U vitesse_ecoulementcompressible%s  vitesse_ecoulementcompressible.ads  97f5b71b EE OO PF PK
+U vitesse_ecoulementcompressible%s  vitesse_ecoulementcompressible.ads  c98b11dc EE OO PF PK
+W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.numerics.aux%s	a-numaux.adb		a-numaux.ali
+W ada.numerics.generic_elementary_functions%s
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W interface_strategievitesse%s  interface_strategievitesse.ads  interface_strategievitesse.ali
 Z system%s		system.ads		system.ali
+Z system.exn_llf%s	s-exnllf.adb		s-exnllf.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
@@ -53,12 +62,14 @@ D g-io.ads		20180524051736 9f0d3ab2 gnat.io%s
 D interface_strategievitesse.ads  20181129193708 23ca6036 interface_strategievitesse%s
 D physicconstants.ads	20181201065536 19953715 physicconstants%s
 D system.ads		20180524051738 32a08138 system%s
+D s-conca2.ads		20180524051736 02a0d7d0 system.concat_2%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
 D s-exnllf.ads		20180524051738 bc7ebbdc system.exn_llf%s
 D s-fatflt.ads		20180524051736 11beb392 system.fat_flt%s
 D s-fatgen.ads		20180524051738 49cbaf86 system.fat_gen%s
 D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
 D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
+D s-imgrea.ads		20180524051736 c7a851e2 system.img_real%s
 D s-parame.ads		20180524051738 48ec542b system.parameters%s
 D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
 D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
@@ -69,34 +80,38 @@ D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20180524051736 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20180524051736 b16154c2 system.storage_pools%s
 D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
-D vitesse_ecoulementcompressible.ads  20181129202800 b43fd72d vitesse_ecoulementcompressible%s
-D vitesse_ecoulementcompressible.adb  20181209124736 bdf297f3 vitesse_ecoulementcompressible%b
+D vitesse_ecoulementcompressible.ads  20181212130952 bf3013d3 vitesse_ecoulementcompressible%s
+D vitesse_ecoulementcompressible.adb  20181212135104 10f2cc6b vitesse_ecoulementcompressible%b
 X 1 ada.ads
-16K9*Ada 20e8 33|2r6 7r35
+16K9*Ada 20e8 34|2r6 9r25 35|2r6 7r35
 X 4 a-numeri.ads
-16K13*Numerics 32e17 33|2r10 7r39
+16K13*Numerics 32e17 34|2r10 9r29 35|2r10 7r39
 X 6 a-ngelfu.ads
-39k22*Generic_Elementary_Functions 205e46 33|2w19 7r48
-52V13*Sqrt{float} 33|16s39[7]
+37F9 Float_Type 34|9r67
+39k22*Generic_Elementary_Functions 205e46 34|2w19 9r38 35|2w19 7r48
+86V14*"**"{float} 35|21s30[34|9] 22s22[34|9]
 X 11 gnat.ads
-34K9*GNAT 37e9 33|1r6 1r19
+34K9*GNAT 37e9 35|1r6 1r19
 X 12 g-io.ads
-41K14*IO 91e12 33|1w11 1r24
-72U14*Put_Line 33|15s7
+41K14*IO 91e12 35|1w11 1r24
+72U14*Put_Line 35|23s7
 X 13 interface_strategievitesse.ads
-1K9*Interface_StrategieVitesse 9e31 32|1w6 1r38
-3h9*T_Interface_StrategieVitesse 32|6r49 11r49
+1K9*Interface_StrategieVitesse 9e31 34|1w6 1r38
+3h9*T_Interface_StrategieVitesse 34|7r49 13r49
 X 14 physicconstants.ads
-1K9*PhysicConstants 12e20 33|3w6 3r27
-7f4*GAMMA{float} 33|16r50 16r108 16r119
-8f4*V_SON{float} 33|16r15
-X 32 vitesse_ecoulementcompressible.ads
-4K9*Vitesse_EcoulementCompressible 11E9 13l5 13e35 33|6b14 19l5 19t35
-6R9*T_Vitesse_EcoulementCompressible<13|3R9> 7P24 7r52 11c9 11e94 33|10r21
-7V24*calculVitesse{float}<13|6p13> 7^38 7>86 7>101 33|9b24 17l8 17t21
-7p38 This(6R9) 33|10b7
-7f86 totalPressure{float} 33|11b7 16r67
-7f101 staticPressure{float} 33|11b22 16r81
-X 33 vitesse_ecoulementcompressible.adb
-7K12 Float_Functions[6|39] 16r23
+1K9*PhysicConstants 12e20 35|3w6 3r27
+7f4*GAMMA{float} 35|19r34 21r97 21r110
+8f4*V_SON{float} 35|24r15
+X 34 vitesse_ecoulementcompressible.ads
+5K9*Vitesse_EcoulementCompressible 13E9 15l5 15e35 35|6b14 29l5 29t35
+7R9*T_Vitesse_EcoulementCompressible<13|3R9> 8P24 8r52 13c9 13e94 35|10r21
+8V24*calculVitesse{float}<13|6p13> 8^38 8>86 8>101 35|9b24 27l8 27t21
+8p38 This(7R9) 35|10b7
+8f86 totalPressure{float} 35|11b7 21r42
+8f101 staticPressure{float} 35|11b22 21r56 21r72
+9K12*genOp[6|39] 9r93 35|21r23 22r15
+X 35 vitesse_ecoulementcompressible.adb
+7K12 Float_Functions[6|39]
+14f7 tmp{float}
+19f13 sqrt{float} 21m7 21r15 22m7 22r33 23r59 24r21
 

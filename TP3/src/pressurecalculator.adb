@@ -74,8 +74,8 @@ package body PressureCalculator is
                -- On filtre la pression reçue en utilisant la méthode de l'interface_strategiefilter
                This.filteredStaticPressure := This.filter_staticPressure.filterPressure(pressure => Float(measureValue));
 
-               Put_Line("   PressureCalculator: Pression STATIQUE moyenne actuelle : " & Float'Image(This.averageStaticPressure) & "Pa");
-               Put_Line("   PressureCalculator: Pression STATIQUE filtree actuelle : " & Float'Image(This.filteredStaticPressure) & "Pa");
+               Put_Line("   PressureCalculator: Pression STATIQUE moyenne actuelle : " & Integer'Image(Integer(This.averageStaticPressure)) & "Pa");
+               Put_Line("   PressureCalculator: Pression STATIQUE filtree actuelle : " & Integer'Image(Integer(This.filteredStaticPressure)) & "Pa");
 
 
                -----------
@@ -91,8 +91,8 @@ package body PressureCalculator is
                -- On filtre la pression reçue en utilisant la méthode de l'interface_strategiefilter
                This.filteredTotalPressure := This.filter_totalPressure.filterPressure(pressure => Float(measureValue));
 
-               Put_Line("   PressureCalculator: Pression TOTALE moyenne actuelle : " & Float'Image(This.averageTotalPressure) & "Pa");
-               Put_Line("   PressureCalculator: Pression TOTALE filtree actuelle : " & Float'Image(This.filteredTotalPressure) & "Pa");
+               Put_Line("   PressureCalculator: Pression TOTALE moyenne actuelle : " & Integer'Image(Integer(This.averageTotalPressure)) & "Pa");
+               Put_Line("   PressureCalculator: Pression TOTALE filtree actuelle : " & Integer'Image(Integer(This.filteredTotalPressure)) & "Pa");
 
                -- On notifie l'ADM des nouvelles pressions moyennes)
                This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.averageStaticPressure,
@@ -121,7 +121,7 @@ package body PressureCalculator is
          if (tmpValue /= 0) then
             okValueCounter := okValueCounter + 1;
             totalStaticPressure := totalStaticPressure + tmpValue;
-            Put_Line("   [" & Integer'Image(index) & " ] = " & Integer'Image(tmpValue));
+            Put_Line("   [Device " & Integer'Image(index) & "] = " & Integer'Image(tmpValue) & " Pa" );
          end if;
          index := index + 1;
 

@@ -2,9 +2,6 @@ pragma Ada_2012;
 with GNAT.IO; use GNAT.IO;
 package body SpeedFormulaSelector is
 
-   -------------------
-   -- calculVitesse --
-   -------------------
 
    overriding function calculVitesse
      (This : access T_SpeedFormulaSelector;
@@ -24,7 +21,11 @@ package body SpeedFormulaSelector is
 
       if (tmpSpeed > 0.0) then
          This.lastSpeed := tmpSpeed;
+         This.countT := This.countT + 1;
+      else
+         This.count := This.count + 1;
       end if;
+         Put_Line("Compteur de vitesse nulle : " & Integer'Image(This.count) & " / " & Integer'Image(This.countT));
 
       return (This.lastSpeed);
    end calculVitesse;

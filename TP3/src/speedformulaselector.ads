@@ -12,6 +12,8 @@ package SpeedFormulaSelector is
 private 
       type T_SpeedFormulaSelector is new T_Interface_StrategieVitesse with record
       lastSpeed : Float := 0.0;
+      count : Integer := 0;
+      countT : Integer := 0;
       formula_incompressible : T_Interface_StrategieVitesse_Access := new T_Vitesse_EcoulementIncompressible;
       formula_compressible : T_Interface_StrategieVitesse_Access := new T_Vitesse_EcoulementCompressible;
       strategySelected : T_Interface_StrategieVitesse_Access;
