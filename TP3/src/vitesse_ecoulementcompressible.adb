@@ -16,11 +16,11 @@ package body Vitesse_EcoulementCompressible is
       --Put_Line("      [Vitesse] = ECOULEMENT COMPRESSIBLE" & Float'Image(totalPressure) & Float'Image(staticPressure));
       --return V_SON * Float_Functions.Sqrt( 2.0/(GAMMA-1.0) * ( ((totalPressure/staticPressure)**Natural(((GAMMA-1.0)/GAMMA))) -1.0) );
 
-            sqrt : Float := 2.0/(GAMMA - 1.0);
+      sqrt : Float := 2.0/(GAMMA - 1.0);
    begin
       sqrt := sqrt * (genOp."**"( Float((totalPressure+staticPressure)/staticPressure) , Float((GAMMA - 1.0)/GAMMA) ) - 1.0);
       sqrt := genOp."**"( Float(sqrt), Float(0.5) );
-      Put_Line(" V_SON*sqrt ============= " & Float'Image(sqrt) );
+      Put_Line("      [Vitesse] = ECOULEMENT COMPRESSIBLE" & Float'Image(sqrt) );
       return (V_SON*sqrt);
 
 

@@ -16,16 +16,8 @@ package body SpeedFormulaSelector is
          This.strategySelected := This.formula_incompressible;
       end if;
 
-      tmpSpeed := This.strategySelected.calculVitesse(totalPessure   => totalPressure,
+      This.lastSpeed := This.strategySelected.calculVitesse(totalPessure   => totalPressure,
                                                       staticPressure => staticPressure);
-
-      if (tmpSpeed > 0.0) then
-         This.lastSpeed := tmpSpeed;
-         This.countT := This.countT + 1;
-      else
-         This.count := This.count + 1;
-      end if;
-         Put_Line("Compteur de vitesse nulle : " & Integer'Image(This.count) & " / " & Integer'Image(This.countT));
 
       return (This.lastSpeed);
    end calculVitesse;

@@ -13,19 +13,16 @@ RV NO_LOCAL_ALLOCATORS
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
-RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U speedformulaselector%b  speedformulaselector.adb  de57786f OO PK
+U speedformulaselector%b  speedformulaselector.adb  68917653 OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.io%s		g-io.adb		g-io.ali
-Z system.concat_4%s	s-conca4.adb		s-conca4.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
-U speedformulaselector%s  speedformulaselector.ads  0206deb1 EE OO PF PK
+U speedformulaselector%s  speedformulaselector.ads  018f35df EE OO PF PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -53,14 +50,12 @@ D gnat.ads		20180524051738 fd2ad2f1 gnat%s
 D g-io.ads		20180524051736 9f0d3ab2 gnat.io%s
 D interface_strategiefilter.ads  20181204081624 46373d78 interface_strategiefilter%s
 D interface_strategievitesse.ads  20181129193708 23ca6036 interface_strategievitesse%s
-D speedformulaselector.ads  20181212122122 d03298c2 speedformulaselector%s
-D speedformulaselector.adb  20181212132930 9168da1f speedformulaselector%b
+D speedformulaselector.ads  20181214143554 d3bb73ac speedformulaselector%s
+D speedformulaselector.adb  20181214143618 24273f4d speedformulaselector%b
 D system.ads		20180524051738 32a08138 system%s
-D s-conca4.ads		20180524051738 7e642b20 system.concat_4%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
 D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
 D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
-D s-imgint.ads		20180524051736 02dbe0c2 system.img_int%s
 D s-parame.ads		20180524051738 48ec542b system.parameters%s
 D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
 D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
@@ -80,36 +75,34 @@ X 9 gnat.ads
 34K9*GNAT 37e9 14|2r6 2r19
 X 10 g-io.ads
 41K14*IO 91e12 14|2w11 2r24
-72U14*Put_Line 14|28s10
 X 11 interface_strategiefilter.ads
 1K9*Interface_StrategieFilter 9e30 13|4w6 4r37
 X 12 interface_strategievitesse.ads
 1K9*Interface_StrategieVitesse 9e31 13|1w6 1r38
-3h9*T_Interface_StrategieVitesse 13|7r39 13r42
-4P9*T_Interface_StrategieVitesse_Access(3R9) 13|17r32 18r30 19r26
-6y13*calculVitesse{float} 14|19R41
-6f71 totalPessure{float} 14|19r55
+3h9*T_Interface_StrategieVitesse 13|7r39 14r42
+4P9*T_Interface_StrategieVitesse_Access(3R9) 13|18r32 19r30 20r26
+6y13*calculVitesse{float} 14|19R47
+6f71 totalPessure{float} 14|19r61
 6f85 staticPressure{float} 14|20r55
 X 13 speedformulaselector.ads
-5K9*SpeedFormulaSelector 13E12 22l5 22e25 14|3b14 33l5 33t25
-7R9*T_SpeedFormulaSelector<12|3R9> 8P24 8r52 13c12 21e14 14|7r21
-8V24*calculVitesse{float}<12|6p13> 8^38 8>76 8>91 14|6b24 31l8 31t21
-8p38 This(7R9) 14|7b7 13r11 14r10 14r35 16r10 16r35 19r19 23r10 24r10 24r25
-. 26r10 26r24 28r66 28r102 30r15
-8f76 totalPressure{float} 14|8b7 19r73
+5K9*SpeedFormulaSelector 14E12 23l5 23e25 14|3b14 25l5 25t25
+7R9*T_SpeedFormulaSelector<12|3R9> 8P24 8r52 14c12 22e14 14|7r21
+8V24*calculVitesse{float}<12|6p13> 8^38 8>76 8>91 14|6b24 23l8 23t21
+8p38 This(7R9) 14|7b7 13r11 14r10 14r35 16r10 16r35 19r7 19r25 22r15
+8f76 totalPressure{float} 14|8b7 19r79
 8f91 staticPressure{float} 14|8b22 20r73
-14f7 lastSpeed{float} 14|13r16 23m15 30r20
-15i7 count{integer} 14|26m15 26r29 28r71
-16i7 countT{integer} 14|24m15 24r30 28r107
-17p7 formula_incompressible{12|4P9} 14|16r40
-18p7 formula_compressible{12|4P9} 14|14r40
-19p7 strategySelected{12|4P9} 14|14m15 16m15 19r24
+15f7 lastSpeed{float} 14|13r16 19m12 22r20
+16i7 count{integer}
+17i7 countT{integer}
+18p7 formula_incompressible{12|4P9} 14|16r40
+19p7 formula_compressible{12|4P9} 14|14r40
+20p7 strategySelected{12|4P9} 14|14m15 16m15 19r30
 X 14 speedformulaselector.adb
-11f7 tmpSpeed{float} 19m7 22r11 23r28
-X 34 vitesse_ecoulementcompressible.ads
-5K9*Vitesse_EcoulementCompressible 13|2w6 2r42 34|15e35
-7R9*T_Vitesse_EcoulementCompressible<12|3R9> 13|18r73 34|13e94
-X 35 vitesse_ecoulementincompressible.ads
-4K9*Vitesse_EcoulementIncompressible 13|3w6 3r44 35|16e37
-6R9*T_Vitesse_EcoulementIncompressible<12|3R9> 13|17r75 35|13e96
+11f7 tmpSpeed{float}
+X 32 vitesse_ecoulementcompressible.ads
+5K9*Vitesse_EcoulementCompressible 13|2w6 2r42 32|15e35
+7R9*T_Vitesse_EcoulementCompressible<12|3R9> 13|19r73 32|13e94
+X 33 vitesse_ecoulementincompressible.ads
+4K9*Vitesse_EcoulementIncompressible 13|3w6 3r44 33|16e37
+6R9*T_Vitesse_EcoulementIncompressible<12|3R9> 13|18r75 33|13e96
 

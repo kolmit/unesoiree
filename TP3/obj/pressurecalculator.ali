@@ -20,7 +20,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pressurecalculator%b	pressurecalculator.adb	1e082ad8 OO PK
+U pressurecalculator%b	pressurecalculator.adb	cf8be178 OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W filter_airbus%s	filter_airbus.adb	filter_airbus.ali
 W filter_boeing%s	filter_boeing.adb	filter_boeing.ali
@@ -64,7 +64,7 @@ D interface_observerpressure.ads  20181203124250 3b31aba8 interface_observerpres
 D interface_strategiefilter.ads  20181204081624 46373d78 interface_strategiefilter%s
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
 D pressurecalculator.ads  20181204160502 ca43a778 pressurecalculator%s
-D pressurecalculator.adb  20181209131052 3023b99e pressurecalculator%b
+D pressurecalculator.adb  20181214144026 e1a0723e pressurecalculator%b
 D system.ads		20180524051738 32a08138 system%s
 D s-conca3.ads		20180524051738 0b705ca5 system.concat_3%s
 D s-conca5.ads		20180524051736 875e432e system.concat_5%s
@@ -160,10 +160,10 @@ X 17 pressurecalculator.ads
 36A9 T_Sources_Array(integer)<integer> 38r32 39r31
 38a7 mesureStaticCollection{36A9} 18|14r41 15m18 67m20 68r122 120r38
 39a7 mesureTotalCollection{36A9} 18|19r41 20m18 84m21 85r122 147r38
-40f7 averageStaticPressure{float} 18|26m15 72m21 77r117 98r89 188r19
-40f30 averageTotalPressure{float} 18|25m15 89m21 94r115 99r88 194r19
-41f7 filteredStaticPressure{float} 18|75m21 78r117
-41f30 filteredTotalPressure{float} 18|92m21 95r115
+40f7 averageStaticPressure{float} 18|26m15 72m21 77r117 188r19
+40f30 averageTotalPressure{float} 18|25m15 89m21 94r115 194r19
+41f7 filteredStaticPressure{float} 18|75m21 78r117 98r89
+41f30 filteredTotalPressure{float} 18|92m21 95r115 99r88
 42p7 filter_staticPressure{15|4P9} 18|23m15 75r52
 42p30 filter_totalPressure{15|4P9} 18|24m15 92r51
 44p7 observerCollectionADM{13|5P8} 18|98r21 172m12 178r16

@@ -95,8 +95,8 @@ package body PressureCalculator is
                Put_Line("   PressureCalculator: Pression TOTALE filtree actuelle : " & Integer'Image(Integer(This.filteredTotalPressure)) & "Pa");
 
                -- On notifie l'ADM des nouvelles pressions moyennes)
-               This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.averageStaticPressure,
-                                                          averageTotalPressure => This.averageTotalPressure,
+               This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.filteredStaticPressure,
+                                                          averageTotalPressure => This.filteredTotalPressure,
                                                           isStaticMeasure => False);
 
             else
