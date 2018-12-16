@@ -18,11 +18,7 @@ package ExternalADM is
 
 
 private
-     
-   function getMeasureValue(This: in out T_ExternalADM) return Integer;
-   function getMeasureStatus(This: in out T_ExternalADM) return Boolean;
-   function getDeviceId(This: in out T_ExternalADM) return Integer;
-   function getMeasureType(This: in out T_ExternalADM) return Boolean;
+
    
    type T_ExternalADM is new T_ObjetAncetre with record
       observerCollection: T_Interface_ObserverPressure_Access;

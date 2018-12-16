@@ -21,7 +21,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		37466d5f NE OO SU
+U main%b		main.adb		5ab93756 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -54,8 +54,8 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D adm.ads		20181212121330 1eedffbc adm%s
-D externaladm.ads	20181203124554 60db298e externaladm%s
+D adm.ads		20181216164758 1eedffbc adm%s
+D externaladm.ads	20181215163308 ddf503a8 externaladm%s
 D filter_airbus.ads	20181204150830 45380add filter_airbus%s
 D filter_boeing.ads	20181204103404 4002526d filter_boeing%s
 D filter_dassault.ads	20181129162050 7e5f563c filter_dassault%s
@@ -65,10 +65,10 @@ D interface_strategiefilter.ads  20181204081624 46373d78 interface_strategiefilt
 D interface_strategievitesse.ads  20181129193708 23ca6036 interface_strategievitesse%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20181214142800 d2612b4b main%b
+D main.adb		20181216164758 e0cd1803 main%b
 D objetancetre.ads	20181111135120 cabe6945 objetancetre%s
-D pressurecalculator.ads  20181204160502 ca43a778 pressurecalculator%s
-D pressuresensor.ads	20181203131052 989414ff pressuresensor%s
+D pressurecalculator.ads  20181216172716 6909120d pressurecalculator%s
+D pressuresensor.ads	20181215163234 d9a3e2ed pressuresensor%s
 D speedformulaselector.ads  20181214143554 d3bb73ac speedformulaselector%s
 D system.ads		20180524051738 32a08138 system%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
@@ -100,14 +100,14 @@ X 13 adm.ads
 11P9*T_ADM_Access(10R9) 24|26r22
 20V28*New_And_InitializeADM{11P9} 24|26s38
 X 14 externaladm.ads
-6K9*ExternalADM 35e16 24|2w6 2r23
-8R9*T_ExternalADM<25|4R9> 33e14 24|17r59
+6K9*ExternalADM 31e16 24|2w6 2r23
+8R9*T_ExternalADM<25|4R9> 29e14 24|17r59
 9P9*T_ExternalADM_Access(8R9) 24|17r31
-13U14*simuleMeasure 24|39s20 46s20 51s20 56s20
-14i28 valeurMesure{integer} 24|39r34 46r34 51r34 56r34
-15i28 idDevice{integer} 24|40r34 47r34 52r34 57r34
-16b28 measureStatus{boolean} 24|41r34 48r34 53r34 58r34
-17b28 isStaticMeasure{boolean} 24|42r34 49r34 54r34 59r34
+13U14*simuleMeasure 24|41s20 48s20 55s20 61s20 67s20 74s20
+14i28 valeurMesure{integer} 24|41r34 48r34 55r34 61r34 67r34 74r34
+15i28 idDevice{integer} 24|42r34 49r34 56r34 62r34 68r34 75r34
+16b28 measureStatus{boolean} 24|43r34 50r34 57r34 63r34 69r34 76r34
+17b28 isStaticMeasure{boolean} 24|44r34 51r34 58r34 64r34 70r34 77r34
 X 15 filter_airbus.ads
 4K9*Filter_Airbus 22e18 24|8w6 8r25 24r109
 6R9*T_Filter_Airbus<20|3R9> 19e14 24|24r92
@@ -123,7 +123,7 @@ X 18 interface_observercalculator.ads
 X 19 interface_observerpressure.ads
 1K9*Interface_ObserverPressure 17e31 24|5w6 5r38
 3h8*T_Interface_ObserverPressure
-4P8*T_Interface_ObserverPressure_Access(3R8) 24|33r33 36r33
+4P8*T_Interface_ObserverPressure_Access(3R8) 24|32r33 35r33
 X 20 interface_strategiefilter.ads
 1K9*Interface_StrategieFilter 9e30 24|6w6 6r37
 3h9*T_Interface_StrategieFilter
@@ -131,29 +131,28 @@ X 21 interface_strategievitesse.ads
 1K9*Interface_StrategieVitesse 9e31 24|7w6 7r38
 3h9*T_Interface_StrategieVitesse
 X 24 main.adb
-16U11*Main 16b11 192l5 192t9
-17p4 Un_External_ADM{14|9P9} 22r88 39r4 46r4 51r4 56r4
-18p4 Un_Sensor{27|9P9} 32r33 61r4
-19p4 Un_Autre_Sensor{27|9P9} 35r33 66r4
-22p4 Un_Pressure_Calculator{26|11P9} 26r60 33r69 36r69
+16U11*Main 16b11 211l5 211t9
+17p4 Un_External_ADM{14|9P9} 22r88 41r4 48r4 55r4 61r4 67r4 74r4
+18p4 Un_Sensor{27|9P9} 31r33 80r4
+19p4 Un_Autre_Sensor{27|9P9} 34r33 85r4
+22p4 Un_Pressure_Calculator{26|11P9} 26r60 32r69 35r69
 26p4 Un_ADM{13|11P9}
-28i4 nb{integer}
 X 26 pressurecalculator.ads
-8K9*PressureCalculator 24|3w6 3r30 26|51e23
+8K9*PressureCalculator 24|3w6 3r30 26|49e23
 11P9*T_PressureCalculator_Access(10R9) 24|22r38
 17V28*New_And_Initialize{11P9} 24|22s69
 X 27 pressuresensor.ads
-6K9*PressureSensor 24|4w6 4r26 27|31e19
-8R9*T_PressureSensor<25|4R9> 24|18r56 19r62 27|30e13
+6K9*PressureSensor 24|4w6 4r26 27|25e19
+8R9*T_PressureSensor<25|4R9> 24|18r56 19r62 27|24e13
 9P9*T_PressureSensor_Access(8R9) 24|18r25 19r31
-11U14*registerObserver 24|32s4 35s4
-11r32 This{8R9} 24|32r21 35r21
-11p63 Observer{19|4P8} 24|33r21 36r21
-13U14*simuleMeasure 24|61s14 66s20
-13i59 valeurMesure{integer} 24|61r28 66r34
-13i86 idDevice{integer} 24|62r28 67r28
-13b109 measureStatus{boolean} 24|63r28 68r34
-13b137 isStaticMeasure{boolean} 24|64r34 69r34
+11U14*registerObserver 24|31s4 34s4
+11r32 This{8R9} 24|31r21 34r21
+11p63 Observer{19|4P8} 24|32r21 35r21
+13U14*simuleMeasure 24|80s14 85s20
+13i59 valeurMesure{integer} 24|80r28 85r34
+13i86 idDevice{integer} 24|81r28 86r28
+13b109 measureStatus{boolean} 24|82r28 87r34
+13b137 isStaticMeasure{boolean} 24|83r34 88r34
 X 28 speedformulaselector.ads
 5K9*SpeedFormulaSelector 24|14w6 14r32 28|23e25
 7R9*T_SpeedFormulaSelector<21|3R9> 24|27r64 28|22e14

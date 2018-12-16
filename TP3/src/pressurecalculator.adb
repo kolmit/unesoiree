@@ -2,6 +2,8 @@ with GNAT.IO; use GNAT.IO;
 with Filter_Boeing; use Filter_Boeing;
 with Filter_Dassault; use Filter_Dassault;
 with Filter_Airbus; use Filter_Airbus;
+with PhysicConstants; use PhysicConstants;
+
 
 package body PressureCalculator is
 
@@ -53,13 +55,12 @@ package body PressureCalculator is
                                       measureValue : in Integer;
                                       measureStatus : in Boolean;
                                       isStaticMeasure : in Boolean) is
-      p0 : Integer := 101315;
    begin
 
       -- Les tableaux "mesureStaticCollection" et "mesureTotalCollection" stocke les valeurs dont le status est OK.
       -- ex: pour le device dont l'ID est 1, la valeur sera stockée à l'index 1 du tableau: mesureStaticCollection(1)
          if measureStatus then
-            if measureValue > 0 and measureValue < p0 then
+            if measureValue > 0 and measureValue < Integer(p0) then
 
                --------------
                -- STATIQUE --
@@ -94,10 +95,10 @@ package body PressureCalculator is
                Put_Line("   PressureCalculator: Pression TOTALE moyenne actuelle : " & Integer'Image(Integer(This.averageTotalPressure)) & "Pa");
                Put_Line("   PressureCalculator: Pression TOTALE filtree actuelle : " & Integer'Image(Integer(This.filteredTotalPressure)) & "Pa");
 
-               -- On notifie l'ADM des nouvelles pressions moyennes)
-               This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.filteredStaticPressure,
-                                                          averageTotalPressure => This.filteredTotalPressure,
-                                                          isStaticMeasure => False);
+
+            This.observerCollectionADM.notifyChangeADM(averageStaticPressure => This.filteredStaticPressure,
+                                                        averageTotalPressure => This.filteredTotalPressure,
+                                                        isStaticMeasure => False);
 
             else
                Put_Line("   PressureCalculator: Mesure KO.");
@@ -182,17 +183,6 @@ package body PressureCalculator is
       end if;
    end NotifyAllObserversADM;
 
-
-   function getAverageStaticPressure(This: in out T_PressureCalculator) return Float is
-   begin
-      return This.averageStaticPressure;
-   end getAverageStaticPressure;
-
-
-      function getAverageTotalPressure(This: in out T_PressureCalculator) return Float is
-   begin
-      return This.averageTotalPressure;
-   end getAverageTotalPressure;
    -- </Pour l'ADM en listen>
    -- </Pour l'ADM en listen>
 

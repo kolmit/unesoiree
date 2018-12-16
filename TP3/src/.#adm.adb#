@@ -10,7 +10,6 @@ package body ADM is
      function Initialize (strategyChosen : T_Interface_StrategieVitesse_Access) return T_ADM is
          This: T_ADM;
       begin
-         -- On initialise les variables
          This.currentAltitude := 0.0;
          This.currentSpeed := 0.0;
          This.speedStrategy := strategyChosen;

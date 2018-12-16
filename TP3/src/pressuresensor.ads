@@ -12,12 +12,6 @@ package PressureSensor is
    procedure NotifyAllObservers (This: in out T_PressureSensor);
    procedure simuleMeasure(This: in out T_PressureSensor; valeurMesure : in Integer; idDevice : in Integer; measureStatus : in Boolean; isStaticMeasure : in Boolean);
 
-   
-   function getMeasureValue(This: in out T_PressureSensor) return Integer;
-   function getMeasureStatus(This: in out T_PressureSensor) return Boolean;
-   function getDeviceId(This: in out T_PressureSensor) return Integer;
-   function getMeasureType(This: in out T_PressureSensor) return Boolean;
-
 
 private
    

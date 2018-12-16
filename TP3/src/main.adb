@@ -25,38 +25,57 @@ procedure Main is
 
    Un_ADM : constant T_ADM_Access := New_And_InitializeADM(Un_Pressure_Calculator,
                                                            new T_SpeedFormulaSelector);
-   nb : Integer := 10;
 
    begin
-   -- L'observateur s'enregistre auprès des 2 capteurs internes :
+   -- Le PressureCalculator s'enregistre auprès des 2 capteurs internes :
    registerObserver(This     => Un_Sensor.all,
                     Observer => T_Interface_ObserverPressure_Access(Un_Pressure_Calculator));
 
    registerObserver(This     => Un_Autre_Sensor.all,
                     Observer => T_Interface_ObserverPressure_Access(Un_Pressure_Calculator));
 
-   -- Jeu de test 0: Pression et Status aléatoire
+
+
+   -- Test 1
+   -- TP2 Exigence 4 : Si toutes les mesures KO, L'altitude n'est pas calculée.
+   Un_External_ADM.simuleMeasure(valeurMesure  => 100044,
+                                 idDevice      => 2,
+                                 measureStatus => False,
+                                 isStaticMeasure => True);
+
+   -- Test 1
+   -- TP2 Exigence 4 : Si toutes les mesures KO, L'altitude n'est pas calculée.
+   Un_External_ADM.simuleMeasure(valeurMesure  => 100045,
+                                 idDevice      => 1,
+                                 measureStatus => False,
+                                 isStaticMeasure => True);
+
+   -- Test 2
+   -- TP2 Exigence 1 : Une mesure produit un nouveau calcul d'altitude.
    Un_External_ADM.simuleMeasure(valeurMesure  => 100000,
                                  idDevice      => 1,
                                  measureStatus => True,
                                  isStaticMeasure => True);
-
-
-   -- Faux car p > p0
+   -- Test 3.1
+   -- TP2 Exigence 2 : Faux car p > p0
    Un_External_ADM.simuleMeasure(valeurMesure  => 101316,
                                  idDevice      => 2,
                                  measureStatus => True,
                                  isStaticMeasure => True);
-
-   Un_External_ADM.simuleMeasure(valeurMesure  => 101011,
+   -- Test 3.2
+   -- TP2 Exigence 2 : Faux car p < 0
+   Un_External_ADM.simuleMeasure(valeurMesure  => -100,
                                  idDevice      => 3 ,
                                  measureStatus => True,
                                  isStaticMeasure => True);
 
+   -- Test 3.3
+   -- TP2 Exigence 2 : Faux car le status de la mesure est à False = KO.
    Un_External_ADM.simuleMeasure(valeurMesure  => 100000,
                                  idDevice      => 5,
-                                 measureStatus => True,
+                                 measureStatus => False,
                                  isStaticMeasure => False);
+
 
    Un_Sensor.simuleMeasure(valeurMesure  => 19000,
                            idDevice      => 7,

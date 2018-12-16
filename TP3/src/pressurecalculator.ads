@@ -44,8 +44,6 @@ private
       observerCollectionADM : T_Interface_ObserverCalculator_Access;
    end record;
 
-   function getAverageStaticPressure(This: in out T_PressureCalculator) return Float;
-   function getAverageTotalPressure(This: in out T_PressureCalculator) return Float;
 
 
 end PressureCalculator;
