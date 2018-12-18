@@ -32,7 +32,6 @@ private
       currentAltitude, currentSpeed : Float; 
       
       averageStaticPressureFromCalculator, averageTotalPressureFromCalculator : Float;
-      staticPressure, totalPressure : T_Interface_StrategieFilter_Access;
       speedStrategy : T_Interface_StrategieVitesse_Access;
    end record;
 
