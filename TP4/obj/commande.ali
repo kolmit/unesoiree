@@ -1,0 +1,19 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U commande%s		commande.ads		53a70f6d NE OO PK
+
+D commande.ads		20181226171026 53a70f6d commande%s
+D system.ads		20180524051738 32a08138 system%s
+X 1 commande.ads
+1K9*Commande 5l5 5e13
+3E12*T_Commande_Pilote 3e55
+3n34*IRS_FIRST{3E12}
+3n45*ADM_FIRST{3E12}
+

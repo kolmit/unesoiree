@@ -1,0 +1,99 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DISPATCHING_CALLS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U adm%b			adm.adb			25a2e880 OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W testvalues%s		testvalues.ads		testvalues.ali
+
+U adm%s			adm.ads			cb0b7e38 EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W interface_device%s	interface_device.ads	interface_device.ali
+W mesure%s		mesure.adb		mesure.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-except.ads		20180524051736 291912d5 ada.exceptions%s
+D a-finali.ads		20180524051738 bf4f806b ada.finalization%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051738 491b781d ada.tags%s
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D adm.ads		20181226132136 cdaab519 adm%s
+D adm.adb		20181226172754 b86b137d adm%b
+D interface_device.ads	20181226132212 2f4f2280 interface_device%s
+D mesure.ads		20181219143158 29eee9a1 mesure%s
+D system.ads		20180524051738 32a08138 system%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180524051736 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180524051736 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180524051736 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180524051736 aedef97e system.stream_attributes%s
+D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D testvalues.ads	20181226200936 50634ee4 testvalues%s
+X 7 adm.ads
+4K9*ADM 16E4 26l5 26e8 8|2b14 30l5 30t8
+6R9*T_ADM<9|4R9> 7r36 10r33 16P13 16r38 17P13 17r42 23c9 25e14 8|6r34 7r17
+. 15r42 25r38
+7P9*T_ADM_Access(6R9)
+9K12*Constructor 11l8 11e19 8|4b17 12l8 12t19
+10V15*Initialize{6R9} 8|6b16 10l12 10t22
+16V13 getMyType{integer}<9|8p13> 16^24 8|25b13 28l8 28t17
+16p24 This(6R9) 8|25b24
+17V13 simuleVitesse{10|5P9}<9|7p13> 17^28 8|15b13 22l8 22t21
+17p28 This(6R9) 8|15b28 17r7 21r14
+24p7 currentMesure{10|5P9} 8|17m12 21r19
+X 8 adm.adb
+7r10 This{7|6R9} 9r17
+X 9 interface_device.ads
+2K9*Interface_Device 7|2w6 2r28 9|9e21
+4h9*T_Interface_Device 7|6r22 23r22
+X 10 mesure.ads
+2K9*Mesure 7|1w6 1r18 8|17r29 10|20e11
+4R9*T_Mesure 8|17r71 10|19e14
+5P9*T_Mesure_Access(4R9) 7|17r56 24r23 8|15r56
+8K12*Constructor 8|17r36 10|10e19
+9V16*Initialize{5P9} 8|17s48
+9p28 This{5P9} 8|17r59
+9f64 value{float} 8|18r66
+9e82 status{6E9} 8|19r66
+X 28 testvalues.ads
+2K9*TestValues 8|1w6 1r22 18r76 19r76 28|14e15
+5f4*valueADM{float} 8|18r87
+6e4*statusADM{10|6E9} 8|19r87
+

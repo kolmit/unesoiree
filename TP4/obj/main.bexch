@@ -1,0 +1,30 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr
+20181218155350
+[BOUND OBJECT FILES]
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\commande.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\mesure.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\interface_device.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\interface_adaptateur.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\adaptateur.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\testvalues.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\adm.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\gps.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\irs.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\pilote.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\acpos.o
+C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\
+-LC:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

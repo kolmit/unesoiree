@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\GNAT\2018\bin\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 2" >
+      <vfs_project />
+      <vfs_file>C:\GNAT\2018\bin\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 169" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 17" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 77" line=" 17" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 23" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\irs.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\mesure.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 22" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\acpos.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 68" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\acpos.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 18" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adaptateur.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 3" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adaptateur.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 14" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\gps.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 96" line=" 21" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\irs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 69" line=" 21" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\gps.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 14" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\pilote.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 22" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\pilote.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 145" line=" 7" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\interface_adaptateur.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\mesure.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 10" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\interface_device.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adaptateur.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adaptateur.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adaptateur.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 17" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 15" >
+      <vfs_project />
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 17" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\adm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 8" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\mesure.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 9" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\mesure.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 6" >
+      <vfs_project />
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\mesure.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\testvalues.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 22" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\pilote.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 27" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\irs.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\tp4.gpr</vfs_project>
+      <vfs_file>C:\Users\Bastien\Desktop\GitHub_bvstien\unesoiree\TP4\src\main.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

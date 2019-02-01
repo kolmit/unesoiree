@@ -1,0 +1,178 @@
+V "GNAT Lib v2018"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DISPATCHING_CALLS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U main%b		main.adb		7df04fef NE OO SU
+W acpos%s		acpos.adb		acpos.ali
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W adaptateur%s		adaptateur.adb		adaptateur.ali
+W adm%s			adm.adb			adm.ali
+W commande%s		commande.ads		commande.ali
+W gps%s			gps.adb			gps.ali
+W interface_adaptateur%s  interface_adaptateur.ads  interface_adaptateur.ali
+W interface_device%s	interface_device.ads	interface_device.ali
+W irs%s			irs.adb			irs.ali
+W mesure%s		mesure.adb		mesure.ali
+W pilote%s		pilote.adb		pilote.ali
+Z system%s		system.ads		system.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W testvalues%s		testvalues.ads		testvalues.ali
+
+D acpos.ads		20181226195928 8a1d6c07 acpos%s
+D ada.ads		20180524051736 76789da1 ada%s
+D a-except.ads		20180524051736 291912d5 ada.exceptions%s
+D a-finali.ads		20180524051738 bf4f806b ada.finalization%s
+D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051738 491b781d ada.tags%s
+D a-textio.ads		20180524051738 881db35a ada.text_io%s
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D adaptateur.ads	20181226165922 2e25343d adaptateur%s
+D adm.ads		20181226132136 cdaab519 adm%s
+D commande.ads		20181226171026 53a70f6d commande%s
+D gps.ads		20181226170748 393a69eb gps%s
+D interface_adaptateur.ads  20181226165738 3606a3b9 interface_adaptateur%s
+D interface_device.ads	20181226132212 2f4f2280 interface_device%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
+D irs.ads		20181224122044 bea8220e irs%s
+D main.adb		20190201093156 3276a60b main%b
+D mesure.ads		20181219143158 29eee9a1 mesure%s
+D pilote.ads		20181226141202 1af8d569 pilote%s
+D system.ads		20180524051738 32a08138 system%s
+D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
+D s-finmas.ads		20180524051738 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-pooglo.ads		20180524051736 ede33ef8 system.pool_global%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20180524051736 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180524051736 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180524051736 aedef97e system.stream_attributes%s
+D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+D testvalues.ads	20181226200936 50634ee4 testvalues%s
+X 1 acpos.ads
+9K9*ACPOS 39e10 19|4w6 4r17 30r31 32r31
+10R9*T_ACPOS<14|4R8> 37e14 19|30r72 32r72
+11P9*T_ACPOS_Access(10R9) 19|30r13 32r13
+14A9*T_DeviceCollection(15|5P9)<integer> 19|26r14
+17K12*Constructor 19e19 19|30r37 32r37
+18V16*Initialize{11P9} 19|30s49 32s49
+18p28 This{11P9} 19|30r60 32r60
+18p63 a{14|5P8} 19|31r60 33r60
+21U14*InitializeDevices 19|51R11 62R11
+21a55 listDevices{14A9} 19|51r29 62r29
+X 2 ada.ads
+16K9*Ada 20e8 19|7r6 7r23
+X 8 a-textio.ads
+49K13*Text_IO 471e16 19|7w10 7r27
+263U14*Put_Line 19|70s4 77s4 85s4 93s4 108s4 116s4 124s4 132s4 149s4 156s4
+. 162s4 169s4
+X 10 adaptateur.ads
+3K9*Adaptateur 22e15 19|10w6 10r22
+5R9*T_Adaptateur<14|4R8> 19e14 19|27r54
+X 11 adm.ads
+4K9*ADM 26e8 19|1w6 1r15
+6R9*T_ADM<15|4R9> 25e14 19|16r44 17r44 18r44
+X 12 commande.ads
+1K9*Commande 5e13 19|6w6 6r20 65r54 67r54
+3n34*IRS_FIRST{3E12} 19|65r63
+3n45*ADM_FIRST{3E12} 19|67r63
+X 13 gps.ads
+4K9*GPS 25e8 19|3w6 3r15
+6R9*T_GPS<15|4R9> 24e14 19|23r44 24r44
+X 14 interface_adaptateur.ads
+2K9*Interface_Adaptateur 9e25 19|11w6 11r32
+4h8*T_Interface_Adaptateur
+5P8*T_Interface_Adaptateur_Access(4R8) 19|27r17
+X 15 interface_device.ads
+2K9*Interface_Device 9e21 19|9w6 9r28
+4h9*T_Interface_Device
+5P9*T_Interface_Device_Access(4R9) 19|16r11 17r11 18r11 20r11 21r11 23r11
+. 24r11
+X 18 irs.ads
+4K9*IRS 26e8 19|2w6 2r15
+6R9*T_IRS<15|4R9> 25e14 19|20r44 21r44
+X 19 main.adb
+15U11*Main 15b11 174l5 174t9
+16p4 ADM1{15|5P9} 42r18 55r18
+17p4 ADM2{15|5P9} 43r18 54r18
+18p4 ADM3{15|5P9} 44r18 53r18
+20p4 IRS1{15|5P9} 46r18 58r18
+21p4 IRS2{15|5P9} 47r18 57r18
+23p4 GPS1{15|5P9} 50r18 60r18
+24p4 GPS2{15|5P9} 49r18 61r18
+26a4 listDev{1|14A9} 42m4 43m4 44m4 46m4 47m4 49m4 50m4 51r44 53m4 54m4 55m4
+. 57m4 58m4 60m4 61m4 62r44
+27p4 Adaptateur{14|5P8} 31r65 33r65
+30p4 ACPOS1{1|11P9} 37r77 51r4 64r54 66r54 71r58 82r58 90r58 98r58 113r58
+. 121r58 129r58 137r58 153r58 160r58 166r58 173r58
+32p4 ACPOS2{1|11P9} 38r77 62r4 72r58
+34f4 resF{float} 71m4 72m4 82m4 90m4 98m4 113m4 121m4 129m4 137m4 153m4 160m4
+. 166m4 173m4
+35p4 res{20|5P9}
+36p4 piloteAvion{21|7P9} 64r4 66r4 71r12 72r12 82r12 90r12 98r12 113r12 121r12
+. 129r12 137r12 153r12 160r12 166r12 173r12
+X 20 mesure.ads
+2K9*Mesure 19|8w6 8r18 20|20e11
+4R9*T_Mesure 19|35r33 20|19e14
+5P9*T_Mesure_Access(4R9) 19|35r10
+6n22*OK{6E9} 19|81r28 97r28 120r28 165r28
+6n26*FAIL{6E9} 19|89r28
+6n32*UNDEFINED{6E9} 19|112r28 128r28 136r28 152r28 159r28 172r28
+X 21 pilote.ads
+4K9*Pilote 19|5w6 5r18 36r37 21|23e11
+6R9*T_Pilote 19|36r79 21|21e14
+7P9*T_Pilote_Access(6R9) 19|36r18
+9K12*Constructor 19|36r44 21|11e19
+10V16*Initialize{7P9} 19|36s56
+10p28 This{7P9} 19|36r67
+10p64 acpos1{1|11P9} 19|37r67
+10p92 acpos2{1|11P9} 19|38r67
+13V13*getSpeedFromACPOS{float} 19|71R24 72R24 82R24 90R24 98R24 113R24 121R24
+. 129R24 137R24 153R24 160R24 166R24 173R24
+13p56 acposQueried{1|11P9} 19|71r42 72r42 82r42 90r42 98r42 113r42 121r42
+. 129r42 137r42 153r42 160r42 166r42 173r42
+14U14*envoyerCommandeACPOS 19|64R16 66R16
+14p60 acposToNotify{1|11P9} 19|64r37 66r37
+14e95 cmd{12|3E12} 19|65r37 67r37
+X 41 testvalues.ads
+2K9*TestValues 19|12w6 12r22 80r4 81r4 88r4 89r4 96r4 97r4 111r4 112r4 119r4
+. 120r4 127r4 128r4 135r4 136r4 151r4 152r4 158r4 159r4 164r4 165r4 171r4
+. 172r4 41|14e15
+5f4*valueADM{float} 19|80m15 88m15 96m15
+6e4*statusADM{20|6E9} 19|81m15 89m15 97m15
+8f4*valueIRS{float} 19|111m15 119m15 127m15 135m15
+9e4*statusIRS{20|6E9} 19|112m15 120m15 128m15 136m15
+11f4*valueGPS{float} 19|151m15 158m15 164m15 171m15
+12e4*statusGPS{20|6E9} 19|152m15 159m15 165m15 172m15
+
